@@ -6,7 +6,7 @@ subtitle: Data Scientist & AI Specialist | Kaggle Master | Focus on Medical AI &
 
 profile:
   align: right
-  image: Github_crop.JPG
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
 ---
 I am a Data Scientist and AI Mentor with a strong background in **Computer Vision** and **Natural Language Processing**.
