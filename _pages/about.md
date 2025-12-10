@@ -2,16 +2,22 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Data Scientist & AI Specialist | Kaggle Master | Focus on Medical AI & LLMs
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: Github_crop.JPG
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+---
+I am a Data Scientist and AI Mentor with a strong background in **Computer Vision** and **Natural Language Processing**.
+Currently, I work as a **Research Assistant** at Staffordshire University (Remote), focusing on **Medical Image Analysis** and Deep Learning models for healthcare decision support.
+
+Previously, I served as a Data Scientist at **NICICO** (National Iranian Copper Industries Co.), where I deployed computer vision systems for industrial safety. I am also ranked as a **Top 4 Data Scientist in Iran** (Favikon) and hold the **Kaggle Master** tier.
+
+My research interests include:
+- **Medical AI:** Segmentation & diagnostics (e.g., Left Ventricle Segmentation).
+- **Large Language Models (LLMs):** Fine-tuning and RAG systems.
+- **Computer Vision:** Object detection and tracking in industrial environments.
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
