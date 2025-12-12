@@ -108,6 +108,17 @@ nav_order: 6
           <img src="/assets/img/posters/TabularDataCleaning.jpg" alt="Data Cleaning Demo" width="100" style="border-radius: 4px;">
         </a>
       </div>
+      <h4 style="margin-top: 15px; font-size: 1rem; color: #4479A1;">🔹 Car Price Prediction (May 9, 2025)</h4>
+      <div style="display: flex; gap: 10px; align-items: center; font-size: 0.9rem; margin-bottom: 10px;">
+        <ul style="padding-left: 20px; margin: 0;">
+          <li>Statistical analysis and exploration of the car price dataset.</li>
+          <li>Data preparation and modeling techniques for prediction.</li>
+          <li>Training prediction models and evaluating performance with precise metrics.</li>
+        </ul>
+        <a href="/assets/img/posters/CarPricePrediction.jpg" target="_blank">
+          <img src="/assets/img/posters/CarPricePrediction.jpg" alt="Car Price Prediction Workshop Poster" width="100" style="border-radius: 4px;">
+        </a>
+      </div>
     </div>
     <div style="font-size: 0.9rem; color: #444; margin-top: 15px;">
       <strong>Skills:</strong> AI · Data Science · Deep Learning · Computer Vision · U-Net · Data Analysis · Python
@@ -356,7 +367,6 @@ nav_order: 6
 ---
 ## 🏫 Teaching Assistant (TA) Experience
 
-</div>
 <div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 30px;">
   <img src="/assets/img/sirjan_university_of_technology_logo.jpg" alt="SUT Logo" width="56" height="56" style="border-radius: 4px; margin-right: 12px; object-fit: contain;"> 
   <div>
