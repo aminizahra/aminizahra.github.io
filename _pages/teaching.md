@@ -140,7 +140,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>    
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Machine Learning Lecturer</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Machine Learning Lecturer</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Sep 2024 - Dec 2024 · 4 mos <br>
       Tehran, Tehran Province, Iran · Remote
@@ -259,7 +259,7 @@ nav_order: 6
 <div style="border-left: 2px solid #a0a0a0; margin-left: 28px; padding-left: 30px; padding-bottom: 10px;">
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>    
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Founder</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Founder</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Aug 2024 - Present · 1 yr 5 mos <br>
       Shahr-e Babak · On-site
@@ -281,7 +281,7 @@ nav_order: 6
 <div style="border-left: 2px solid #a0a0a0; margin-left: 28px; padding-left: 30px; padding-bottom: 10px;">
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>    
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Director of Training</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Director of Training</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Jan 2025 - Dec 2025 · 1 yr <br>
       Tehran, Tehran Province, Iran · Remote
@@ -303,7 +303,7 @@ nav_order: 6
 <div style="border-left: 2px solid #a0a0a0; margin-left: 28px; padding-left: 30px; padding-bottom: 10px;">
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Manager of Data Science School</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Manager of Data Science School</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Jan 2023 - Dec 2023 · 1 yr <br>
       Tehran, Tehran Province, Iran · Remote
@@ -325,7 +325,7 @@ nav_order: 6
 <div style="border-left: 2px solid #a0a0a0; margin-left: 28px; padding-left: 30px; padding-bottom: 10px;">
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Artificial Intelligence and Data Science Mentor</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Artificial Intelligence and Data Science Mentor</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Jun 2024 - Nov 2024 · 6 mos <br>
       Rafsanjan, Kerman Province, Iran · Hybrid
@@ -347,7 +347,7 @@ nav_order: 6
 <div style="border-left: 2px solid #a0a0a0; margin-left: 28px; padding-left: 30px; padding-bottom: 10px;">
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">KaggleXBIPOC Mentorship</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">KaggleXBIPOC Mentorship</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Jul 2023 - Sep 2023 · 3 mos <br>
       On-site
@@ -379,7 +379,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Undergraduate Teaching Assistant</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Undergraduate Teaching Assistant</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Jul 2018 - Mar 2022 · 3 yrs 9 mos <br>
       Iran
