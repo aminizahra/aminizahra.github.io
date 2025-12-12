@@ -63,11 +63,66 @@ nav_order: 6
 
 ## 🎓 Instructor & Lecturer
 
+
+---
+<div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 30px;">
+  <img src="/assets/img/posters/IranAI_Cir.png" alt="Iran AI Association Logo" width="56" height="56" style="border-radius: 4px; margin-right: 12px; object-fit: contain;"> 
+  <div>
+    <h3 style="margin: 0; font-size: 1.3rem; font-weight: bold;">National Artificial Intelligence Association of Iran</h3>
+    <div style="color: #666; font-size: 0.9rem;">Freelance</div>
+  </div>
+</div>
+
+<div style="border-left: 2px solid #a0a0a0; margin-left: 28px; padding-left: 30px; padding-bottom: 10px;">
+
+  <div style="position: relative; margin-bottom: 40px;">
+    <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>    
+    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Lecturer & Technical Workshop Conductor</div>
+    <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
+      Mar 2025 - Dec 2025 · 10 mos <br>
+      Tehran, Tehran Province, Iran · Remote
+    </div>
+    <div style="font-size: 0.95rem; margin-bottom: 15px;">
+      Conducted advanced technical workshops focused on bridging academic Deep Learning concepts with practical real-world applications in medical and data engineering domains.
+      <br>
+      <strong>[<a href="https://github.com/aminizahra/IranAI-workshops" target="_blank">View Workshop Repository on GitHub ↗</a>]</strong>
+    </div>
+    <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-top: 15px;">
+      <h4 style="margin-top: 0; font-size: 1rem; color: #C70039;">🔹 Medical Image Analysis with AI (Mar 2025)</h4>
+      <div style="display: flex; gap: 10px; align-items: center; font-size: 0.9rem; margin-bottom: 10px;">
+        <ul style="padding-left: 20px; margin: 0;">
+          <li>Introduction to **U-Net** and its applications in medical imaging.</li>
+          <li>LV dataset preprocessing & U-Net implementation.</li>
+          <li>Model evaluation using **Dice Score** and **IoU** metrics.</li>
+        </ul>
+        <a href="/assets/img/posters/MedicalImageAnalysis-LV.jpg" target="_blank">
+          <img src="/assets/img/certificate/MedicalImageAnalysis-LV.jpg" alt="Medical Image Analysis Demo" width="100" style="border-radius: 4px;">
+        </a>
+      </div>
+      <h4 style="margin-top: 15px; font-size: 1rem; color: #4479A1;">🔹 Data Cleaning and Preparation Techniques (Apr 2025)</h4>
+      <div style="display: flex; gap: 10px; align-items: center; font-size: 0.9rem;">
+        <ul style="padding-left: 20px; margin: 0;">
+          <li>Initial data analysis using Pandas (Exploratory Data Analysis).</li>
+          <li>Handling missing data and Outlier detection (Boxplot).</li>
+          <li>Encoding categorical data and preparing data for Scikit-learn modeling.</li>
+        </ul>
+        <a href="/assets/img/posters/TabularDataCleaning.jpg" target="_blank">
+          <img src="/assets/img/certificate/TabularDataCleaning.jpg" alt="Data Cleaning Demo" width="100" style="border-radius: 4px;">
+        </a>
+      </div>
+    </div>
+    <div style="font-size: 0.9rem; color: #444; margin-top: 15px;">
+      <strong>Skills:</strong> AI · Data Science · Deep Learning · Computer Vision · U-Net · Data Analysis · Python
+    </div>
+  </div>
+
+</div>
+
 <div style="display: flex; align-items: center; margin-bottom: 10px;">
   <img src="/assets/img/certificate/filoger_logo.jpg" alt="Filoger Logo" width="56" height="56" style="border-radius: 4px; margin-right: 12px; object-fit: contain;">
   <div>
     <h3 style="margin: 0; font-size: 1.3rem; font-weight: bold;">Filoger AI Company</h3>
-    <div style="color: #666; font-size: 0.9rem;">4 yrs 3 mos</div>
+    <div style="color: #666; font-size: 0.9rem;">1 yr 5 mos</div>
   </div>
 </div>
 
@@ -75,7 +130,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #e0e0e0; border-radius: 50%; border: 2px solid #fff;"></span>    
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Machine Learning Lecturer at NLP School</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Machine Learning Lecturer at NLP School</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Oct 2024 - Dec 2024 · 3 mos <br>
       Tehran, Tehran Province, Iran · Remote
@@ -93,7 +148,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #e0e0e0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Deep Learning Lecturer</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Deep Learning Lecturer</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Nov 2023 - Jun 2024 · 8 mos <br>
       Remote
@@ -116,7 +171,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 10px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #e0e0e0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Machine Learning Lecturer</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Machine Learning Lecturer</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Sep 2022 - Feb 2023 · 6 mos <br>
       Remote
