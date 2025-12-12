@@ -22,6 +22,10 @@ nav_order: 6
 
 **Filoger AI Company**
 * **Natural Language Processing (NLP):** Instructor for NLP School. *(Oct 2024 - Dec 2024)*
+* **Deep Learning Comprehensive Course:**
+  * **Syllabus:** Covered Feed-Forward Neural Networks (FFNN), Backpropagation, CNNs (ResNet, VGG), RNNs, Object Detection (R-CNN, Fast R-CNN), Transformers (ViT), and Generative Adversarial Networks (GANs).
+  * **Final Project:** Medical Image Analysis for **Left Ventricle (LV) Segmentation** using **U-Net** and **DeepLab** architectures.
+  * [cite_start]*(Nov 2023 - June 2024)* [cite: 3, 7]
 * **Machine Learning Comprehensive Course:** Regression, Classification, Clustering (K-Means, DBSCAN), and PCA. *(Sep 2022 - Feb 2023)*
 
 ---
@@ -41,9 +45,9 @@ nav_order: 6
 
 ## 🏫 Teaching Assistant (TA) Experience
 
-**Filoger (Joint with Fanap Campus)** | *Senior TA*
-* **Computer Vision Bootcamp:** Assisted in Deep Learning and CV projects. *(Dec 2023 - Sep 2024)*
-* **Data Engineering Bootcamp:** Taught SQL Server and MongoDB concepts. *(Dec 2023 - Aug 2024)*
+**Filoger** | *Senior TA*
+* **Computer Vision Bootcamp(Joint with Fanap Campus):** Assisted in Deep Learning and CV projects. *(Dec 2023 - Sep 2024)*
+* **Data Engineering Bootcamp(Joint with Fanap Campus):** Taught SQL Server and MongoDB concepts. *(Dec 2023 - Aug 2024)*
 * **AI Summer School:** Covered Deep Learning and NLP topics. *(Apr 2022 - Oct 2022)*
 
 **Sirjan University of Technology (SUT)** | *Teaching Assistant*
