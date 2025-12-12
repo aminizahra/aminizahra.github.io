@@ -433,7 +433,7 @@ nav_order: 6
       Tehran, Iran · Remote
     </div>
     <div style="font-size: 0.95rem; margin-bottom: 10px;">
-      Assisted in teaching database technologies, including **MongoDB** and **Microsoft SQL Server**, essential for ETL processes.
+      Assisted in teaching database technologies, including MongoDB and Microsoft SQL Server, essential for ETL processes.
     </div>
     <div style="font-size: 0.9rem; color: #444; margin-bottom: 15px;">
       <strong>Skills:</strong> MongoDB · SQL Server · SQL · Python · Data Engineering
@@ -441,27 +441,6 @@ nav_order: 6
     <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block; margin-top: 5px;">
       <a href="/assets/img/certificate/DE_TA_Zahra Amini.jpg" target="_blank">
         <img src="/assets/img/certificate/DE_TA_Zahra Amini.jpg" alt="Data Engineering TA Certificate" width="180" style="display: block;">
-      </a>
-      <div style="background: #f9f9f9; padding: 4px 8px; font-size: 0.75rem; font-weight: 600; color: #555;">Certificate ↗</div>
-    </div>
-  </div>
-
-  <div style="position: relative; margin-bottom: 40px;">
-    <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">TA at Filoger Artificial Intelligence Summer School</div>
-    <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
-      Apr 2022 - Oct 2022 · 7 mos <br>
-      Remote
-    </div>
-    <div style="font-size: 0.95rem; margin-bottom: 10px;">
-      Supported instruction for Classical ML, Deep Learning, Computer Vision, and NLP content, helping students progress from zero to junior level.
-    </div>
-    <div style="font-size: 0.9rem; color: #444; margin-bottom: 15px;">
-      <strong>Skills:</strong> Machine Learning · Deep Learning · Computer Vision · NLP · Python
-    </div>
-    <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block; margin-top: 5px;">
-      <a href="/assets/img/certificate/ML_DS_TA_Zahra Amini.jpg" target="_blank">
-        <img src="/assets/img/certificate/ML_DS_TA_Zahra Amini.jpg" alt="AI Summer School Certificate" width="180" style="display: block;">
       </a>
       <div style="background: #f9f9f9; padding: 4px 8px; font-size: 0.75rem; font-weight: 600; color: #555;">Certificate ↗</div>
     </div>
@@ -482,6 +461,28 @@ nav_order: 6
     </div>
   </div>
 
+
+  <div style="position: relative; margin-bottom: 40px;">
+    <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">TA at Filoger Artificial Intelligence Summer School</div>
+    <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
+      Apr 2022 - Oct 2022 · 7 mos <br>
+      Remote
+    </div>
+    <div style="font-size: 0.95rem; margin-bottom: 10px;">
+      Supported instruction for Classical ML, Deep Learning, Computer Vision, and NLP content, helping students progress from zero to junior level.
+    </div>
+    <div style="font-size: 0.9rem; color: #444; margin-bottom: 15px;">
+      <strong>Skills:</strong> Machine Learning · Deep Learning · Computer Vision · NLP · Python
+    </div>
+    <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block; margin-top: 5px;">
+      <a href="/assets/img/certificate/AI_School_Collaboration Certificate_ZahraAmini.png" target="_blank">
+        <img src="/assets/img/certificate/AI_School_Collaboration Certificate_ZahraAmini.png" alt="AI Summer School Certificate" width="180" style="display: block;">
+      </a>
+      <div style="background: #f9f9f9; padding: 4px 8px; font-size: 0.75rem; font-weight: 600; color: #555;">Certificate ↗</div>
+    </div>
+  </div>
+
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
     <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Teacher Assistant (AI Bootcamp)</div>
@@ -490,7 +491,7 @@ nav_order: 6
       Remote
     </div>
     <div style="font-size: 0.95rem; margin-bottom: 10px;">
-      Assisted in teaching the AI Bootcamp roadmap, covering essential libraries (**NumPy, Pandas, Matplotlib**) and core ML algorithms (**SVM, Random Forest, Clustering, PCA**).
+      Assisted in teaching the AI Bootcamp roadmap, covering essential libraries (NumPy, Pandas, Matplotlib) and core ML algorithms (SVM, Random Forest, Clustering, PCA).
     </div>
     <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block; margin-top: 5px;">
       <a href="/assets/img/certificate/ML_DS_TA_Zahra Amini.jpg" target="_blank">
