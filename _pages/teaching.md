@@ -25,8 +25,36 @@ nav_order: 6
 * **Deep Learning Comprehensive Course:**
   * **Syllabus:** Covered Feed-Forward Neural Networks (FFNN), Backpropagation, CNNs (ResNet, VGG), RNNs, Object Detection (R-CNN, Fast R-CNN), Transformers (ViT), and Generative Adversarial Networks (GANs).
   * **Final Project:** Medical Image Analysis for **Left Ventricle (LV) Segmentation** using **U-Net** and **DeepLab** architectures.
-  * [cite_start]*(Nov 2023 - June 2024)* [cite: 3, 7]
-* **Machine Learning Comprehensive Course:** Regression, Classification, Clustering (K-Means, DBSCAN), and PCA. *(Sep 2022 - Feb 2023)*
+  * *(Nov 2023 - June 2024)*
+* **Machine Learning Comprehensive Course:
+  * ** Regression, Classification, Clustering (K-Means, DBSCAN), and PCA.
+  * *(Sep 2022 - Feb 2023)*
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+  <img src="/assets/img/certificate/filoger_logo.jpg" alt="Filoger Logo" width="50" height="50" style="border-radius: 4px; margin-right: 15px; object-fit: contain;">
+  
+  <div style="flex: 1;">
+    <h3 style="margin: 0; font-size: 1.2rem;">Filoger AI Company</h3>    
+    <div style="font-weight: bold; font-size: 1rem; margin-top: 5px;">
+      Machine Learning Lecturer at NLP School
+    </div>    
+    <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">
+      Oct 2024 - Dec 2024 · 3 mos <br>
+      Tehran, Tehran Province, Iran · Remote
+    </div>
+    <div style="font-size: 0.95rem; margin-bottom: 15px;">
+      <strong>Skills:</strong> Python (Programming Language) · Machine Learning · Mathematics · Statistics · Natural Language Processing (NLP) · Teaching · Teamwork
+    </div>
+    <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block;">
+      <a href="/assets/img/certificate/NLP_Teacher_Zahra%20Amini.jpg" target="_blank" title="View Full Certificate">
+        <img src="/assets/img/certificate/NLP_Teacher_Zahra%20Amini.jpg" alt="NLP Teacher Certificate" width="220" style="display: block; transition: opacity 0.3s;">
+      </a>
+      <div style="background: #f9f9f9; padding: 8px 12px; font-size: 0.85rem; font-weight: 600; color: #333;">
+        NLP Teacher Certificate ↗
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 
