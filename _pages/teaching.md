@@ -30,31 +30,6 @@ nav_order: 6
   * ** Regression, Classification, Clustering (K-Means, DBSCAN), and PCA.
   * *(Sep 2022 - Feb 2023)*
 
-<div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
-  <img src="/assets/img/certificate/filoger_logo.jpg" alt="Filoger Logo" width="50" height="50" style="border-radius: 4px; margin-right: 15px; object-fit: contain;">
-  
-  <div style="flex: 1;">
-    <h3 style="margin: 0; font-size: 1.2rem;">Filoger AI Company</h3>    
-    <div style="font-weight: bold; font-size: 1rem; margin-top: 5px;">
-      Machine Learning Lecturer at NLP School
-    </div>    
-    <div style="color: #666; font-size: 0.9rem; margin-bottom: 10px;">
-      Oct 2024 - Dec 2024 · 3 mos <br>
-      Tehran, Tehran Province, Iran · Remote
-    </div>
-    <div style="font-size: 0.95rem; margin-bottom: 15px;">
-      <strong>Skills:</strong> Python (Programming Language) · Machine Learning · Mathematics · Statistics · Natural Language Processing (NLP) · Teaching · Teamwork
-    </div>
-    <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block;">
-      <a href="/assets/img/certificate/NLP_Teacher_Zahra%20Amini.jpg" target="_blank" title="View Full Certificate">
-        <img src="/assets/img/certificate/NLP_Teacher_Zahra%20Amini.jpg" alt="NLP Teacher Certificate" width="220" style="display: block; transition: opacity 0.3s;">
-      </a>
-      <div style="background: #f9f9f9; padding: 8px 12px; font-size: 0.85rem; font-weight: 600; color: #333;">
-        NLP Teacher Certificate ↗
-      </div>
-    </div>
-  </div>
-</div>
 
 ---
 
@@ -84,3 +59,92 @@ nav_order: 6
 * **Advanced Programming**
 * **Fundamentals of Programming**
 *(July 2018 - Mar 2022)*
+
+
+## 🎓 Instructor & Lecturer
+
+<div style="display: flex; align-items: center; margin-bottom: 10px;">
+  <img src="/assets/img/certificate/filoger_logo.jpg" alt="Filoger Logo" width="56" height="56" style="border-radius: 4px; margin-right: 12px; object-fit: contain;">
+  <div>
+    <h3 style="margin: 0; font-size: 1.3rem; font-weight: bold;">Filoger AI Company</h3>
+    <div style="color: #666; font-size: 0.9rem;">4 yrs 3 mos</div>
+  </div>
+</div>
+
+<div style="border-left: 2px solid #e0e0e0; margin-left: 28px; padding-left: 30px; padding-bottom: 10px;">
+
+  <div style="position: relative; margin-bottom: 40px;">
+    <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #e0e0e0; border-radius: 50%; border: 2px solid #fff;"></span>    
+    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Machine Learning Lecturer at NLP School</div>
+    <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
+      Oct 2024 - Dec 2024 · 3 mos <br>
+      Tehran, Tehran Province, Iran · Remote
+    </div>    
+    <div style="font-size: 0.95rem; margin-bottom: 10px;">
+      <strong>Skills:</strong> Python · Machine Learning · Mathematics · Statistics · NLP · Teaching · Teamwork
+    </div>
+    <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block; margin-top: 5px;">
+      <a href="/assets/img/certificate/NLP_Teacher_Zahra%20Amini.jpg" target="_blank">
+        <img src="/assets/img/certificate/NLP_Teacher_Zahra%20Amini.jpg" alt="NLP Certificate" width="180" style="display: block;">
+      </a>
+      <div style="background: #f9f9f9; padding: 4px 8px; font-size: 0.75rem; font-weight: 600; color: #555;">Certificate ↗</div>
+    </div>
+  </div>
+
+  <div style="position: relative; margin-bottom: 40px;">
+    <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #e0e0e0; border-radius: 50%; border: 2px solid #fff;"></span>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Deep Learning Lecturer</div>
+    <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
+      Nov 2023 - Jun 2024 · 8 mos <br>
+      Remote
+    </div>
+    <div style="font-size: 0.95rem; margin-bottom: 10px;">
+      <strong>Deep Learning Comprehensive Course:</strong><br>
+      <ul style="margin-bottom: 5px; padding-left: 20px; font-size: 0.9rem;">
+        <li><strong>Syllabus:</strong> Feed-Forward Networks (FFNN), Backpropagation, CNNs (ResNet, VGG), RNNs, Object Detection (R-CNN), Transformers (ViT), and GANs.</li>
+        <li style="color: #C70039;"><strong>Final Project:</strong> Medical Image Analysis for <em>Left Ventricle (LV) Segmentation</em> using U-Net and DeepLab architectures.</li>
+      </ul>
+      <strong>Skills:</strong> Python · Machine Learning · TensorFlow · PyTorch
+    </div>
+    <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block; margin-top: 5px;">
+      <a href="/assets/img/certificate/DL_Teacher_Zahra%20Amini.JPG" target="_blank">
+        <img src="/assets/img/certificate/DL_Teacher_Zahra%20Amini.JPG" alt="DL Certificate" width="180" style="display: block;">
+      </a>
+      <div style="background: #f9f9f9; padding: 4px 8px; font-size: 0.75rem; font-weight: 600; color: #555;">Certificate ↗</div>
+    </div>
+  </div>
+
+  <div style="position: relative; margin-bottom: 10px;">
+    <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #e0e0e0; border-radius: 50%; border: 2px solid #fff;"></span>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Machine Learning Lecturer</div>
+    <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
+      Sep 2022 - Feb 2023 · 6 mos <br>
+      Remote
+    </div>
+    <div style="font-size: 0.95rem; margin-bottom: 10px;">
+      Taught a comprehensive Machine Learning course covering Python, Math, and Core Algorithms.
+      <br>
+      <strong>Syllabus Highlights:</strong>
+      <ul style="font-size: 0.85rem; columns: 2; -webkit-columns: 2; -moz-columns: 2; margin-top: 5px;">
+        <li>Python, NumPy, Pandas</li>
+        <li>Matplotlib & Seaborn</li>
+        <li>Linear & Polynomial Regression</li>
+        <li>Logistic Regression</li>
+        <li>Data Cleaning & Regularization</li>
+        <li>KNN & Naive Bayes</li>
+        <li>SVM (Support Vector Machine)</li>
+        <li>Decision Trees & Random Forest</li>
+        <li>K-Means & Hierarchical Clustering</li>
+        <li>PCA & DBSCAN</li>
+      </ul>
+      <strong>Skills:</strong> Python · Teaching · AI · Data Science · Machine Learning
+    </div>
+    <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; display: inline-block; margin-top: 5px;">
+      <a href="/assets/img/certificate/ML_DS_Zahra%20Amini.jpg" target="_blank">
+        <img src="/assets/img/certificate/ML_DS_Zahra%20Amini.jpg" alt="ML Certificate" width="180" style="display: block;">
+      </a>
+      <div style="background: #f9f9f9; padding: 4px 8px; font-size: 0.75rem; font-weight: 600; color: #555;">Certificate ↗</div>
+    </div>
+  </div>
+
+</div>
