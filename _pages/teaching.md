@@ -32,7 +32,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Python Programming Lecturer</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Python Programming Lecturer</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Oct 2024 - Dec 2024 · 3 mos <br>
       Shahr-e Babak, Kerman Province, Iran · On-site
@@ -406,7 +406,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">TA at Computer Vision Bootcamp (Joint Venture Fanap)</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">TA at Computer Vision Bootcamp (Joint Venture Fanap)</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Dec 2023 - Sep 2024 · 10 mos <br>
       Tehran, Iran · Remote
@@ -427,7 +427,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">TA at Data Engineering Bootcamp (Joint Venture Fanap)</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">TA at Data Engineering Bootcamp (Joint Venture Fanap)</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Dec 2023 - Aug 2024 · 9 mos <br>
       Tehran, Iran · Remote
@@ -448,7 +448,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">TA at Filoger Artificial Intelligence Summer School</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">TA at Filoger Artificial Intelligence Summer School</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Apr 2022 - Oct 2022 · 7 mos <br>
       Remote
@@ -469,7 +469,7 @@ nav_order: 6
     
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">TA at Filoger Computer Vision School</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">TA at Filoger Computer Vision School</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Jan 2023 - Feb 2023 · 2 mos <br>
       Tehran, Iran · Remote
@@ -484,7 +484,7 @@ nav_order: 6
 
   <div style="position: relative; margin-bottom: 40px;">
     <span style="position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: #a0a0a0; border-radius: 50%; border: 2px solid #fff;"></span>
-    <div style="font-weight: bold; font-size: 1.1rem; color: #000;">Teacher Assistant (AI Bootcamp)</div>
+    <div style="font-weight: bold; font-size: 1.1rem; color: #fff;">Teacher Assistant (AI Bootcamp)</div>
     <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
       Oct 2020 - Mar 2022 · 1 yr 6 mos <br>
       Remote
