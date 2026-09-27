@@ -2,7 +2,7 @@
 layout: page
 title: Mahmoud Alipour
 relation: "Teaching Assistant"
-university_logo: assets/img/logo-jetco.png
+university_logo: assets/img/logo-filoger.png
 description: "Head of ADAS Group at JETCO | AI Faculty Member at Filoger"
 img: /assets/img/people/mahmoud-alipour.png
 importance: 2
