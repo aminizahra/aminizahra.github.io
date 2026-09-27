@@ -200,7 +200,7 @@ nav_order: 5
               <!-- Role / Relationship (Moved below the description with a chic box) -->
               {% if person.relation %}
                 <div class="mentor-relation">
-                  <span class="relation-label">Mentored Zahra as:</span>
+                  <span class="relation-label">Supervised me as:</span>
                   <span class="relation-value">{{ person.relation }}</span>
                 </div>
               {% endif %}              
