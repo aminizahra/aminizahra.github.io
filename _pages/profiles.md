@@ -1,28 +1,26 @@
 ---
-layout: profiles
+layout: page
 permalink: /people/
-title: people
-description: members of the lab or group
+title: People
+description: 
 nav: true
 nav_order: 7
-
-profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  - align: right
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
-  - align: left
-    image: prof_pic.jpg
-    content: about_einstein.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
 ---
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for person in site.people %}
+  <div class="col">
+    <div class="card h-100 hoverable">
+      <a href="{{ person.url | relative_url }}">
+        <img src="{{ person.image | relative_url }}" class="card-img-top" alt="{{ person.title }}" style="object-fit: cover; height: 250px;">
+      </a>
+      <div class="card-body text-center">
+        <h5 class="card-title">
+          <a href="{{ person.url | relative_url }}" style="color: inherit; text-decoration: none;">{{ person.title }}</a>
+        </h5>
+        <p class="card-text">{{ person.role }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
