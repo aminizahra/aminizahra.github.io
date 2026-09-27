@@ -8,43 +8,117 @@ nav_order: 5
 ---
 
 <style>
-  /* Custom styles for the mentor cards */
-  .mentor-card {
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    background: #fff;
-    height: 100%;
-  }
-  .mentor-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  }
-  .card-header-bg {
-    background: linear-gradient(135deg, #2e86c1 0%, #1a5276 100%);
-    height: 80px;
-    width: 100%;
-  }
-  .mentor-img-wrapper {
-    margin-top: -50px;
-    text-align: center;
-  }
-  .mentor-img-wrapper img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
+  /* --- Chic & Minimalist Card Design --- */
+  
   .category-title {
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--global-divider-color);
+    color: var(--global-text-color);
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .mentor-card {
+    background-color: var(--global-card-bg-color); 
+    border: 1px solid var(--global-divider-color);
+    border-radius: 20px; 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 20px 20px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .mentor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-color: var(--global-theme-color);
+  }
+
+  .mentor-img-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .mentor-img-wrapper img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--global-card-bg-color);
+    outline: 2px solid var(--global-theme-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease;
+  }
+
+  .mentor-card:hover .mentor-img-wrapper img {
+    transform: scale(1.05);
+  }
+
+  .mentor-name {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--global-text-color);
+    margin-bottom: 8px;
+  }
+
+  .mentor-desc {
+    font-size: 0.9rem;
+    color: var(--global-text-muted-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 0 10px;
+  }
+
+  .mentor-badge {
+    background-color: transparent;
+    color: var(--global-theme-color);
+    border: 1px solid var(--global-theme-color);
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
     margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #2e86c1;
-    color: #333;
-    font-weight: bold;
+    display: inline-block;
+  }
+
+  .view-profile-btn {
+    margin-top: auto; 
+    width: 100%;
+    padding-top: 15px;
+    border-top: 1px dashed var(--global-divider-color);
+  }
+
+  .view-profile-btn span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--global-text-muted-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .mentor-card:hover .view-profile-btn span {
+    color: var(--global-theme-color);
+  }
+
+  a.mentor-link-wrapper {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+    height: 100%;
   }
 </style>
 
@@ -55,43 +129,35 @@ nav_order: 5
 {% for category in categories %}
   <h2 class="category-title">{{ category }}</h2>
   
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">    
     <!-- Iterate over people belonging to the current category -->
     {% for person in site.people %}
       {% if person.category == category %}
-        <div class="col">
-          <div class="mentor-card">            
-            <a href="{{ person.url | relative_url }}" style="text-decoration: none; color: inherit;">
-              <!-- Colored Header Background -->
-              <div class="card-header-bg"></div>              
+        <div class="col">          
+          <a href="{{ person.url | relative_url }}" class="mentor-link-wrapper">
+            <div class="mentor-card">              
               <!-- Profile Image -->
               <div class="mentor-img-wrapper">
-                <img src="{{ person.img | relative_url }}" alt="{{ person.title }}" class="rounded-circle">
+                <img src="{{ person.img | relative_url }}" alt="{{ person.title }}">
               </div>              
-              <div class="card-body text-center mt-2">
-                <!-- Name -->
-                <h5 class="card-title mb-1" style="font-weight: 700;">{{ person.title }}</h5>
-                <p class="text-muted" style="font-size: 0.9rem; line-height: 1.4; height: 40px; overflow: hidden;">
-                  <!-- Displaying the first part of the description -->
-                  {{ person.description | split: '|' | first }}
-                </p>                
-                <!-- Badge (e.g., Recommendation Letter) -->
-                <div class="mt-3">
-                  {% if person.badge %}
-                    <span class="badge" style="background-color: #2e86c1; font-weight: normal; padding: 6px 10px;">
-                      <i class="fas fa-certificate mr-1"></i> {{ person.badge }}
-                    </span>
-                  {% endif %}
+              <!-- Name -->
+              <h3 class="mentor-name">{{ person.title }}</h3>              
+              <!-- Role / Description -->
+              <p class="mentor-desc">
+                {{ person.description | split: '|' | first | strip }}
+              </p>              
+              <!-- Badge -->
+              {% if person.badge %}
+                <div class="mentor-badge">
+                  <i class="fas fa-award mr-1"></i> {{ person.badge }}
                 </div>
-              </div>
-            </a>            
-            <!-- View Profile Button -->
-            <div class="card-footer bg-white border-0 text-center pb-4">
-              <a href="{{ person.url | relative_url }}" class="btn btn-outline-primary btn-sm rounded-pill" style="border-color: #2e86c1; color: #2e86c1;">
-                View Profile <i class="fas fa-arrow-right ml-1"></i>
-              </a>
-            </div>            
-          </div>
+              {% endif %}              
+              <!-- Footer / View Profile -->
+              <div class="view-profile-btn">
+                <span>View Profile &rarr;</span>
+              </div>              
+            </div>
+          </a>          
         </div>
       {% endif %}
     {% endfor %}
