@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 <style>
-  /* --- Chic & Minimalist Card Design (Enhanced) --- */
+  /* --- Chic & Minimalist Card Design (With University Logo) --- */
   
   .category-title {
     margin-top: 50px;
@@ -33,13 +33,34 @@ nav_order: 5
     align-items: center;
     padding: 35px 20px 20px 20px;
     text-align: center;
-    position: relative;
+    position: relative; /* ضروری برای قرارگیری لوگو */
   }
 
   .mentor-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     border-color: var(--global-theme-color);
+  }
+
+  /* استایل لوگوی دانشگاه در گوشه کارت */
+  .university-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.4; /* نیمه‌شفاف در حالت عادی برای حفظ مینیمالیسم */
+    transition: all 0.3s ease;
+    z-index: 2;
+    
+    filter: grayscale(100%);
+  }
+
+  .mentor-card:hover .university-logo {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
   }
 
   .mentor-img-wrapper {
@@ -145,21 +166,24 @@ nav_order: 5
         <div class="col">          
           <a href="{{ person.url | relative_url }}" class="mentor-link-wrapper">
             <div class="mentor-card">              
+              <!-- University Logo (NEW) -->
+              {% if person.university_logo %}
+                <img src="{{ person.university_logo | relative_url }}" class="university-logo" alt="University Logo" title="Institution">
+              {% endif %}              
               <!-- Profile Image -->
               <div class="mentor-img-wrapper">
                 <img src="{{ person.img | relative_url }}" alt="{{ person.title }}">
               </div>              
               <!-- Name -->
               <h3 class="mentor-name">{{ person.title }}</h3>              
-              <!-- Role / Relationship (NEW) -->
+              <!-- Role / Relationship -->
               {% if person.relation %}
                 <div class="mentor-relation">
                   {{ person.relation }}
                 </div>
               {% endif %}              
-              <!-- Role / Description (Institution highlighted via icon) -->
+              <!-- Role / Description -->
               <p class="mentor-desc">
-                <i class="fas fa-university mr-1" style="opacity: 0.7;"></i> 
                 {{ person.description | split: '|' | first | strip }}
               </p>              
               <!-- Badge -->
