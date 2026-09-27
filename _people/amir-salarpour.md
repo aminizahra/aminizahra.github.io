@@ -2,7 +2,7 @@
 layout: page
 title: Dr. Amir Salarpour
 relation: "Research Assistant, Teaching Assistant & Thesis Student"
-university_logo: assets/img/logo-Sirjan University of Technology.png
+university_logo: assets/img/logo-clemson university.png
 description: "PostDoctoral Researcher at Clemson University | Assistant Professor & Thesis Supervisor | Focus: Computer Vision & Deep Learning"
 img: /assets/img/people/amir-salarpour.png
 importance: 2
