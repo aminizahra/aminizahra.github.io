@@ -2,9 +2,9 @@
 layout: page
 title: Dr. Ahmad Pouramini
 relation: "Teaching Assistant & Student"
-university_logo: /assets/img/sirjan-logo.png
+university_logo: assets/img/logo-Sirjan University of Technology.png
 description: "Assistant Professor at Sirjan University of Technology | Ph.D. in AI from Tehran University | Focus: Artificial Intelligence, Machine Learning & NLP"
-img: assets/img/logo-Sirjan University of Technology.png
+img: assets/img/people/ahmad-pouramini.png
 importance: 2
 category: Academic Mentors & Research Supervisors
 related_publications: false
