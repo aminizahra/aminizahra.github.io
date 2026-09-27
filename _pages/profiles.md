@@ -180,6 +180,9 @@ nav_order: 5
               <!-- Role / Relationship -->
               {% if person.relation %}
                 <div class="mentor-relation">
+                  <span style="color: var(--global-text-muted-color); font-size: 0.75rem; text-transform: none; font-weight: 500; display: block; margin-bottom: 2px; letter-spacing: normal;">
+                    My Role:
+                  </span>
                   {{ person.relation }}
                 </div>
               {% endif %}              
