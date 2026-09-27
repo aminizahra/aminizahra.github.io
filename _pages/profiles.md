@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 <style>
-  /* --- Chic & Minimalist Card Design --- */
+  /* --- Chic & Minimalist Card Design (Enhanced) --- */
   
   .category-title {
     margin-top: 50px;
@@ -22,9 +22,9 @@ nav_order: 5
   }
 
   .mentor-card {
-    background-color: var(--global-card-bg-color); 
+    background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
-    border-radius: 20px; 
+    border-radius: 20px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
     height: 100%;
@@ -66,7 +66,16 @@ nav_order: 5
     font-weight: 700;
     font-size: 1.3rem;
     color: var(--global-text-color);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+  }
+
+  .mentor-relation {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--global-theme-color);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   .mentor-desc {
@@ -95,7 +104,7 @@ nav_order: 5
   }
 
   .view-profile-btn {
-    margin-top: auto; 
+    margin-top: auto;
     width: 100%;
     padding-top: 15px;
     border-top: 1px dashed var(--global-divider-color);
@@ -142,8 +151,15 @@ nav_order: 5
               </div>              
               <!-- Name -->
               <h3 class="mentor-name">{{ person.title }}</h3>              
-              <!-- Role / Description -->
+              <!-- Role / Relationship (NEW) -->
+              {% if person.relation %}
+                <div class="mentor-relation">
+                  {{ person.relation }}
+                </div>
+              {% endif %}              
+              <!-- Role / Description (Institution highlighted via icon) -->
               <p class="mentor-desc">
+                <i class="fas fa-university mr-1" style="opacity: 0.7;"></i> 
                 {{ person.description | split: '|' | first | strip }}
               </p>              
               <!-- Badge -->
