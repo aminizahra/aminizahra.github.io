@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 <style>
-  /* --- Chic & Minimalist Card Design (With University Logo) --- */
+  /* --- Chic & Minimalist Card Design (With Avatar Badge Logo) --- */
   
   .category-title {
     margin-top: 50px;
@@ -33,7 +33,7 @@ nav_order: 5
     align-items: center;
     padding: 35px 20px 20px 20px;
     text-align: center;
-    position: relative; /* ضروری برای قرارگیری لوگو */
+    position: relative;
   }
 
   .mentor-card:hover {
@@ -42,35 +42,16 @@ nav_order: 5
     border-color: var(--global-theme-color);
   }
 
-  /* استایل لوگوی دانشگاه در گوشه کارت */
-  .university-logo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    opacity: 0.4; /* نیمه‌شفاف در حالت عادی برای حفظ مینیمالیسم */
-    transition: all 0.3s ease;
-    z-index: 2;
-    
-    filter: grayscale(100%);
-  }
-
-  .mentor-card:hover .university-logo {
-    opacity: 1;
-    filter: grayscale(0%);
-    transform: scale(1.1);
-  }
-
   .mentor-img-wrapper {
     position: relative;
     margin-bottom: 20px;
-  }
-
-  .mentor-img-wrapper img {
     width: 120px;
     height: 120px;
+  }
+
+  .mentor-img-wrapper img.main-profile {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid var(--global-card-bg-color);
@@ -79,8 +60,29 @@ nav_order: 5
     transition: transform 0.4s ease;
   }
 
-  .mentor-card:hover .mentor-img-wrapper img {
+  
+  .inst-badge-logo {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff; 
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid var(--global-card-bg-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    object-fit: contain;
+    z-index: 5;
+    transition: transform 0.3s ease;
+  }
+
+  .mentor-card:hover .mentor-img-wrapper img.main-profile {
     transform: scale(1.05);
+  }
+  
+  .mentor-card:hover .inst-badge-logo {
+    transform: scale(1.15);
   }
 
   .mentor-name {
@@ -166,13 +168,12 @@ nav_order: 5
         <div class="col">          
           <a href="{{ person.url | relative_url }}" class="mentor-link-wrapper">
             <div class="mentor-card">              
-              <!-- University Logo (NEW) -->
-              {% if person.university_logo %}
-                <img src="{{ person.university_logo | relative_url }}" class="university-logo" alt="University Logo" title="Institution">
-              {% endif %}              
-              <!-- Profile Image -->
+              <!-- Profile Image & University Badge -->
               <div class="mentor-img-wrapper">
-                <img src="{{ person.img | relative_url }}" alt="{{ person.title }}">
+                <img src="{{ person.img | relative_url }}" class="main-profile" alt="{{ person.title }}">
+                {% if person.university_logo %}                  
+                  <img src="{{ person.university_logo | relative_url }}" class="inst-badge-logo" alt="Institution Logo" title="Institution">
+                {% endif %}
               </div>              
               <!-- Name -->
               <h3 class="mentor-name">{{ person.title }}</h3>              
