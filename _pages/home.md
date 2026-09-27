@@ -10,8 +10,8 @@ nav_order: 1
   /* --- Modern Hero Section --- */
   .hero-container {
     text-align: center;
-    padding: 60px 20px 80px 20px;
-    margin-top: 20px;
+    padding: 80px 20px 60px 20px;
+    position: relative;
   }
   
   .hero-title {
@@ -19,45 +19,65 @@ nav_order: 1
     font-weight: 800;
     letter-spacing: -1px;
     color: var(--global-text-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.2;
   }
   
-  .hero-title span {
+  .hero-title span.accent {
     color: var(--global-theme-color);
+    position: relative;
+    display: inline-block;
   }
   
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 400;
     color: var(--global-text-muted-color);
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto 40px auto;
-    line-height: 1.6;
+    line-height: 1.7;
+  }
+
+  .highlight-badge {
+    display: inline-block;
+    background-color: rgba(46, 134, 193, 0.1);
+    color: var(--global-theme-color);
+    border: 1px solid rgba(46, 134, 193, 0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
   }
   
   /* --- CTA Buttons --- */
   .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     margin-bottom: 60px;
+    flex-wrap: wrap;
   }
   
   .btn-hero {
-    padding: 12px 30px;
+    padding: 12px 28px;
     border-radius: 30px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     letter-spacing: 0.5px;
     text-decoration: none !important;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
   
   .btn-hero-primary {
     background-color: var(--global-theme-color);
     color: #fff !important;
     border: 2px solid var(--global-theme-color);
-    box-shadow: 0 8px 20px rgba(46, 134, 193, 0.3);
+    box-shadow: 0 8px 20px rgba(46, 134, 193, 0.25);
   }
   
   .btn-hero-primary:hover {
@@ -77,24 +97,24 @@ nav_order: 1
     transform: translateY(-3px);
   }
 
-  /* --- Highlights / Focus Areas --- */
+  /* --- Expertise Cards --- */
   .focus-cards {
     margin-top: 40px;
   }
   
   .focus-card {
-    padding: 30px 20px;
+    padding: 35px 25px;
     border-radius: 16px;
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
     text-align: center;
     height: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
   }
   
   .focus-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     border-color: var(--global-theme-color);
   }
   
@@ -105,7 +125,7 @@ nav_order: 1
   }
   
   .focus-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: 12px;
     color: var(--global-text-color);
@@ -114,58 +134,70 @@ nav_order: 1
   .focus-text {
     font-size: 0.9rem;
     color: var(--global-text-muted-color);
-    line-height: 1.5;
+    line-height: 1.6;
   }
 </style>
 
 <!-- Hero Section -->
 <div class="hero-container">
-  <h1 class="hero-title">Hello, I'm <span>Zahra Amini</span></h1>
+  <div class="highlight-badge">
+    <i class="fas fa-trophy mr-1"></i> Ranked #3 in Data Science (Iran) by Favikon
+  </div>
+  
+  <h1 class="hero-title">Bridging <span class="accent">Healthcare</span> & <span class="accent">AI</span></h1>
+  
   <p class="hero-subtitle">
-    AI Developer, Data Scientist, and Tech Educator bridging the gap between advanced Machine Learning theory and practical, real-world deployment. Founder of Hobot Academy.
+    I am <strong>Zahra Amini</strong>, an AI Developer, Data Scientist, and Tech Educator. My research bridges advanced Machine Learning and clinical applications, focusing on Explainable AI (XAI), Medical Image Segmentation, and Time-Series Signal Processing.
   </p>
   
   <div class="hero-buttons">
-    <a href="{{ '/cv/' | relative_url }}" class="btn-hero btn-hero-primary">
-      <i class="fas fa-file-alt mr-2"></i> View My CV
+    <a href="{{ '/about/' | relative_url }}" class="btn-hero btn-hero-primary">
+      <i class="fas fa-user"></i> More About Me
     </a>
-    <a href="{{ '/projects/' | relative_url }}" class="btn-hero btn-hero-secondary">
-      <i class="fas fa-code mr-2"></i> Explore Projects
+    <a href="{{ '/cv/' | relative_url }}" class="btn-hero btn-hero-secondary">
+      <i class="fas fa-file-pdf"></i> View Resume
+    </a>
+    <a href="{{ '/recommendations/' | relative_url }}" class="btn-hero btn-hero-secondary">
+      <i class="fas fa-award"></i> Recommendations
     </a>
   </div>
 </div>
 
-<hr style="border-top-color: var(--global-divider-color); margin: 20px 0 50px 0;">
+<hr style="border-top-color: var(--global-divider-color); margin: 20px 0 60px 0;">
 
-<!-- Core Focus Areas (3 Columns) -->
+<!-- Core Expertise Areas (3 Columns based on CV) -->
+<h3 style="font-weight: 800; text-align: center; margin-bottom: 40px; color: var(--global-text-color);">Core Expertise</h3>
+
 <div class="row row-cols-1 row-cols-md-3 g-4 focus-cards mb-5">
   
   <div class="col">
     <div class="focus-card">
-      <div class="focus-icon"><i class="fas fa-brain"></i></div>
-      <h3 class="focus-title">Artificial Intelligence</h3>
-      <p class="focus-text">Expertise in Deep Learning, Computer Vision, and Natural Language Processing (NLP) with a focus on scalable architectures.</p>
+      <div class="focus-icon"><i class="fas fa-heartbeat"></i></div>
+      <h3 class="focus-title">Biomedical AI & XAI</h3>
+      <p class="focus-text">Developing Explainable AI models for clinical decision support, including calibrated ML prediction systems for healthcare triage and anomaly detection.</p>
     </div>
   </div>
   
   <div class="col">
     <div class="focus-card">
-      <div class="focus-icon"><i class="fas fa-chart-network"></i></div>
-      <h3 class="focus-title">Data Science</h3>
-      <p class="focus-text">Transforming complex, unstructured data into actionable insights using advanced statistical analysis and machine learning algorithms.</p>
+      <div class="focus-icon"><i class="fas fa-cube"></i></div>
+      <h3 class="focus-title">Advanced Computer Vision</h3>
+      <p class="focus-text">Specializing in Medical Image Semantic Segmentation (U-Net) and large-scale 3D Point Cloud Processing using state-of-the-art Deep Learning architectures.</p>
     </div>
   </div>
   
   <div class="col">
     <div class="focus-card">
       <div class="focus-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-      <h3 class="focus-title">Tech Education</h3>
-      <p class="focus-text">Passionate about democratizing AI education. Mentored thousands of students as a Lecturer and founder of Hobot Academy.</p>
+      <h3 class="focus-title">AI Education & Leadership</h3>
+      <p class="focus-text">Founder of Hobot Academy and lead author of "Introduction to AI in Healthcare." Mentored hundreds of students in deploying real-world machine learning models.</p>
     </div>
   </div>
   
 </div>
 
-<!-- Optional: Latest News/Updates Section -->
-<h3 style="font-weight: 700; margin-top: 60px; margin-bottom: 20px; color: var(--global-text-color);">Latest News</h3>
+<hr style="border-top-color: var(--global-divider-color); margin: 60px 0 40px 0;">
+
+<!-- Latest News Integration -->
+<h3 style="font-weight: 800; margin-bottom: 25px; color: var(--global-text-color);">Recent Updates</h3>
 {% include news.liquid limit=true %}
