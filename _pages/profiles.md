@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 <style>
-  /* --- Chic & Minimalist Card Design (With Avatar Badge Logo) --- */
+  /* --- Chic & Minimalist Card Design --- */
   
   .category-title {
     margin-top: 50px;
@@ -60,14 +60,13 @@ nav_order: 5
     transition: transform 0.4s ease;
   }
 
-  
   .inst-badge-logo {
     position: absolute;
     bottom: -2px;
     right: -2px;
     width: 42px;
     height: 42px;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     border-radius: 50%;
     padding: 5px;
     border: 2px solid var(--global-card-bg-color);
@@ -89,28 +88,45 @@ nav_order: 5
     font-weight: 700;
     font-size: 1.3rem;
     color: var(--global-text-color);
-    margin-bottom: 4px;
-  }
-
-  .mentor-relation {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--global-theme-color);
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    margin-bottom: 8px;
   }
 
   .mentor-desc {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 500;
     color: var(--global-text-muted-color);
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.4;
+    margin-bottom: 18px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     padding: 0 10px;
+  }
+
+  .mentor-relation {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    padding: 10px 15px;
+    background-color: rgba(128, 128, 128, 0.05); 
+    border-radius: 12px;
+    width: 95%;
+  }
+
+  .relation-label {
+    color: var(--global-text-muted-color);
+    font-weight: 500;
+    font-style: italic; 
+  }
+
+  .relation-value {
+    color: var(--global-theme-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 4px;
   }
 
   .mentor-badge {
@@ -171,25 +187,23 @@ nav_order: 5
               <!-- Profile Image & University Badge -->
               <div class="mentor-img-wrapper">
                 <img src="{{ person.img | relative_url }}" class="main-profile" alt="{{ person.title }}">
-                {% if person.university_logo %}                  
+                {% if person.university_logo %}
                   <img src="{{ person.university_logo | relative_url }}" class="inst-badge-logo" alt="Institution Logo" title="Institution">
                 {% endif %}
               </div>              
               <!-- Name -->
               <h3 class="mentor-name">{{ person.title }}</h3>              
-              <!-- Role / Relationship -->
-              {% if person.relation %}
-                <div class="mentor-relation">
-                  <span style="color: var(--global-text-muted-color); font-size: 0.75rem; text-transform: none; font-weight: 500; display: block; margin-bottom: 2px; letter-spacing: normal;">
-                    My Role:
-                  </span>
-                  {{ person.relation }}
-                </div>
-              {% endif %}              
-              <!-- Role / Description -->
+              <!-- Role / Description (Institution highlighted) -->
               <p class="mentor-desc">
                 {{ person.description | split: '|' | first | strip }}
               </p>              
+              <!-- Role / Relationship (Moved below the description with a chic box) -->
+              {% if person.relation %}
+                <div class="mentor-relation">
+                  <span class="relation-label">Mentored Zahra as:</span>
+                  <span class="relation-value">{{ person.relation }}</span>
+                </div>
+              {% endif %}              
               <!-- Badge -->
               {% if person.badge %}
                 <div class="mentor-badge">
