@@ -56,30 +56,25 @@ nav_order: 5
   <h2 class="category-title">{{ category }}</h2>
   
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
-    
     <!-- Iterate over people belonging to the current category -->
     {% for person in site.people %}
       {% if person.category == category %}
         <div class="col">
-          <div class="mentor-card">
-            
+          <div class="mentor-card">            
             <a href="{{ person.url | relative_url }}" style="text-decoration: none; color: inherit;">
               <!-- Colored Header Background -->
-              <div class="card-header-bg"></div>
-              
+              <div class="card-header-bg"></div>              
               <!-- Profile Image -->
               <div class="mentor-img-wrapper">
                 <img src="{{ person.img | relative_url }}" alt="{{ person.title }}" class="rounded-circle">
-              </div>
-              
+              </div>              
               <div class="card-body text-center mt-2">
                 <!-- Name -->
                 <h5 class="card-title mb-1" style="font-weight: 700;">{{ person.title }}</h5>
                 <p class="text-muted" style="font-size: 0.9rem; line-height: 1.4; height: 40px; overflow: hidden;">
                   <!-- Displaying the first part of the description -->
                   {{ person.description | split: '|' | first }}
-                </p>
-                
+                </p>                
                 <!-- Badge (e.g., Recommendation Letter) -->
                 <div class="mt-3">
                   {% if person.badge %}
@@ -89,15 +84,13 @@ nav_order: 5
                   {% endif %}
                 </div>
               </div>
-            </a>
-            
+            </a>            
             <!-- View Profile Button -->
             <div class="card-footer bg-white border-0 text-center pb-4">
               <a href="{{ person.url | relative_url }}" class="btn btn-outline-primary btn-sm rounded-pill" style="border-color: #2e86c1; color: #2e86c1;">
                 View Profile <i class="fas fa-arrow-right ml-1"></i>
               </a>
-            </div>
-            
+            </div>            
           </div>
         </div>
       {% endif %}
