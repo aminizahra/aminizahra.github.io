@@ -2,7 +2,7 @@
 layout: page
 title: Dr. Ahmad Pouramini
 description: "Assistant Professor at Sirjan University of Technology | Ph.D. in AI from Tehran University | Focus: Artificial Intelligence, Machine Learning & NLP"
-img: assets/img/people/ahmad-pouramini.png
+img: _people/people-img/ahmad-pouramini.png
 importance: 2
 category: Academic Mentors & Research Supervisors
 related_publications: false
@@ -89,7 +89,7 @@ badge: Recommendation Letter
 <div style="position: relative; margin-top: 20px; margin-bottom: 40px;">
   <div style="display: flex; gap: 20px; flex-wrap: wrap;">
     <div style="border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; max-width: 300px;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-      <a href="/assets/pdf/people/recom-Ahmad Pouramini-signed .pdf" target="_blank" style="text-decoration: none;">
+      <a href="/_people/people-pdf/recom-Ahmad Pouramini-signed .pdf" target="_blank" style="text-decoration: none;">
         <div style="display: flex; background: #f0f0f0;">
           <img src="/assets/img/people/recom-Ahmad Pouramini-signed_000001.png" alt="Recommendation Page 1" height="180" style="display: block; border-right: 1px solid #ddd;">
           <img src="/assets/img/people/recom-Ahmad Pouramini-signed_000002.png" alt="Recommendation Page 2" height="180" style="display: block;">
