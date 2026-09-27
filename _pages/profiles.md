@@ -8,7 +8,7 @@ nav_order: 5
 ---
 
 <style>
-  /* --- Chic & Minimalist Card Design --- */
+  /* --- Chic & Minimalist Card Design (Optimized for 3 Columns) --- */
   
   .category-title {
     margin-top: 50px;
@@ -31,7 +31,8 @@ nav_order: 5
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 35px 20px 20px 20px;
+    /* Reduced padding to fit 3 cards perfectly */
+    padding: 30px 15px 15px 15px; 
     text-align: center;
     position: relative;
   }
@@ -44,9 +45,10 @@ nav_order: 5
 
   .mentor-img-wrapper {
     position: relative;
-    margin-bottom: 20px;
-    width: 120px;
-    height: 120px;
+    margin-bottom: 15px;
+    /* Reduced image size for 3-column layout */
+    width: 100px;
+    height: 100px;
   }
 
   .mentor-img-wrapper img.main-profile {
@@ -62,13 +64,14 @@ nav_order: 5
 
   .inst-badge-logo {
     position: absolute;
-    bottom: -2px;
-    right: -2px;
-    width: 42px;
-    height: 42px;
+    bottom: -4px;
+    right: -4px;
+    /* Slightly smaller badge */
+    width: 36px; 
+    height: 36px;
     background-color: #ffffff;
     border-radius: 50%;
-    padding: 5px;
+    padding: 4px;
     border: 2px solid var(--global-card-bg-color);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     object-fit: contain;
@@ -86,37 +89,39 @@ nav_order: 5
 
   .mentor-name {
     font-weight: 700;
-    font-size: 1.3rem;
+    /* Adjusted font size */
+    font-size: 1.15rem; 
     color: var(--global-text-color);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .mentor-desc {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: var(--global-text-muted-color);
     line-height: 1.4;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   .mentor-relation {
     font-size: 0.85rem;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    padding: 10px 15px;
+    margin-bottom: 18px;
+    line-height: 1.4;
+    padding: 10px;
     background-color: rgba(128, 128, 128, 0.05); 
     border-radius: 12px;
-    width: 95%;
+    width: 100%;
   }
 
   .relation-label {
     color: var(--global-text-muted-color);
     font-weight: 500;
+    font-size: 0.8rem;
     font-style: italic; 
   }
 
@@ -124,7 +129,9 @@ nav_order: 5
     color: var(--global-theme-color);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    /* Adjusted for long text in narrower cards */
+    font-size: 0.75rem;
+    letter-spacing: 0px;
     display: block;
     margin-top: 4px;
   }
@@ -134,11 +141,10 @@ nav_order: 5
     color: var(--global-theme-color);
     border: 1px solid var(--global-theme-color);
     font-weight: 600;
-    padding: 6px 16px;
+    padding: 5px 12px;
     border-radius: 30px;
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 25px;
+    font-size: 0.7rem;
+    margin-bottom: 20px;
     display: inline-block;
   }
 
@@ -150,7 +156,7 @@ nav_order: 5
   }
 
   .view-profile-btn span {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--global-text-muted-color);
     text-transform: uppercase;
@@ -177,45 +183,56 @@ nav_order: 5
 {% for category in categories %}
   <h2 class="category-title">{{ category }}</h2>
   
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">    
+  <!-- FORCED 3-COLUMN LAYOUT ON DESKTOP: row-cols-md-3 -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mb-5">
+    
     <!-- Iterate over people belonging to the current category -->
     {% for person in site.people %}
       {% if person.category == category %}
-        <div class="col">          
+        <div class="col">
+          
           <a href="{{ person.url | relative_url }}" class="mentor-link-wrapper">
-            <div class="mentor-card">              
+            <div class="mentor-card">
+              
               <!-- Profile Image & University Badge -->
               <div class="mentor-img-wrapper">
                 <img src="{{ person.img | relative_url }}" class="main-profile" alt="{{ person.title }}">
                 {% if person.university_logo %}
                   <img src="{{ person.university_logo | relative_url }}" class="inst-badge-logo" alt="Institution Logo" title="Institution">
                 {% endif %}
-              </div>              
+              </div>
+              
               <!-- Name -->
-              <h3 class="mentor-name">{{ person.title }}</h3>              
+              <h3 class="mentor-name">{{ person.title }}</h3>
+              
               <!-- Role / Description (Institution highlighted) -->
               <p class="mentor-desc">
                 {{ person.description | split: '|' | first | strip }}
-              </p>              
+              </p>
+              
               <!-- Role / Relationship (Moved below the description with a chic box) -->
               {% if person.relation %}
                 <div class="mentor-relation">
                   <span class="relation-label">Supervised me as:</span>
                   <span class="relation-value">{{ person.relation }}</span>
                 </div>
-              {% endif %}              
+              {% endif %}
+              
               <!-- Badge -->
               {% if person.badge %}
                 <div class="mentor-badge">
                   <i class="fas fa-award mr-1"></i> {{ person.badge }}
                 </div>
-              {% endif %}              
+              {% endif %}
+              
               <!-- Footer / View Profile -->
               <div class="view-profile-btn">
                 <span>View Profile &rarr;</span>
-              </div>              
+              </div>
+              
             </div>
-          </a>          
+          </a>
+          
         </div>
       {% endif %}
     {% endfor %}
