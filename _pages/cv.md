@@ -24,7 +24,7 @@ toc:
 </style>
 
 <div class="cv-top">
-  <a class="za-btn primary" href="{{ 'assets/pdf/CV-ZahraAmini.pdf' | relative_url }}">Download PDF</a>
+  <a class="za-btn" href="{{ 'assets/pdf/CV-ZahraAmini.pdf' | relative_url }}">Download PDF</a>
   <a class="cv-btn" href="mailto:amini75zahra@gmail.com">amini75zahra@gmail.com</a>
   <a class="cv-btn" href="https://linkedin.com/in/zahraamini-ai" target="_blank" rel="noopener">LinkedIn</a>
   <a class="cv-btn" href="https://github.com/aminizahra" target="_blank" rel="noopener">GitHub</a>
