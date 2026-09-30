@@ -1,140 +1,49 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Zahra Amini </title> <meta name="author" content="Zahra Amini"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Zahra Amini </title> <meta name="author" content="Zahra Amini"> <meta name="description" content="Zahra Amini - Machine learning researcher in healthcare AI"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
   :root {
     --max-content-width: 930px;
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%A0&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://aminizahra.github.io/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span> </a> </li> <li class="nav-item active"> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/about/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/recommendations/">Recommendations </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">submenus </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/books/">bookshelf</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/blog/">blog</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Home</h1> <p class="post-description"></p> </header> <article> <style>
-  /* --- Modern Hero Section --- */
-  .hero-container {
-    text-align: center;
-    padding: 80px 20px 60px 20px;
-    position: relative;
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span> </a> </li> <li class="nav-item active"> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/about/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/recommendations/">Recommendations </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">submenus </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/books/">bookshelf</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/blog/">blog</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Home</h1> <p class="post-description">Zahra Amini - Machine learning researcher in healthcare AI</p> </header> <article> <style>
+  .za-hero { display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; margin: 1rem 0 2.5rem; }
+  .za-hero-photo { width: 190px; height: 190px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; }
+  .za-hero-text { flex: 1 1 320px; min-width: 0; }
+  .za-hero-text h1 { font-size: 2.2rem; margin-bottom: .25rem; }
+  .za-role { font-size: 1.15rem; color: var(--global-text-color-light); margin-bottom: 1rem; }
+  .za-status { display: inline-block; padding: .3rem .8rem; border: 1px solid var(--global-theme-color); border-radius: 999px; font-size: .9rem; margin-bottom: 1.1rem; }
+  .za-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.1rem 0; }
+  .za-btn { padding: .5rem 1.1rem; border-radius: 4px; border: 1px solid var(--global-theme-color); color: var(--global-theme-color); text-decoration: none; font-weight: 500; }
+  .za-btn:hover { background: var(--global-theme-color); color: var(--global-bg-color); text-decoration: none; }
+  .za-btn.primary { background: var(--global-theme-color); color: var(--global-bg-color); }
+  .za-btn.primary:hover { opacity: .88; }
+  .za-links { display: flex; flex-wrap: wrap; gap: 1.1rem; font-size: 1.6rem; }
+  .za-links a { color: var(--global-text-color-light); }
+  .za-links a:hover { color: var(--global-theme-color); }
+  .za-section { margin: 3rem 0; }
+  .za-section > h2 { font-size: 1.5rem; margin-bottom: 1.1rem; padding-bottom: .4rem; border-bottom: 1px solid var(--global-divider-color); }
+  .za-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.1rem; }
+  .za-card { padding: 1.1rem 1.2rem; border: 1px solid var(--global-divider-color); border-radius: 6px; background: var(--global-card-bg-color); }
+  .za-card h3 { font-size: 1.1rem; margin: 0 0 .5rem; }
+  .za-card p { margin: 0 0 .6rem; font-size: .95rem; }
+  .za-card .za-more { font-size: .9rem; }
+  .za-tag { display: inline-block; font-size: .78rem; padding: .1rem .55rem; margin-bottom: .5rem; border: 1px solid var(--global-divider-color); border-radius: 4px; color: var(--global-text-color-light); }
+  .za-tag.pending { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  .za-timeline { list-style: none; padding: 0; margin: 0; }
+  .za-timeline li { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--global-divider-color); }
+  .za-timeline li:last-child { border-bottom: 0; }
+  .za-date { color: var(--global-text-color-light); font-size: .92rem; }
+  .za-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center; }
+  .za-stat b { display: block; font-size: 1.8rem; color: var(--global-theme-color); }
+  .za-stat span { font-size: .9rem; color: var(--global-text-color-light); }
+  .za-quote { border-left: 3px solid var(--global-theme-color); padding: .2rem 0 .2rem 1rem; margin: 0 0 1rem; }
+  .za-quote footer { font-size: .9rem; color: var(--global-text-color-light); margin-top: .3rem; }
+  .za-contact { text-align: center; padding: 2rem 1rem; border: 1px solid var(--global-divider-color); border-radius: 6px; }
+  @media (max-width: 576px) {
+    .za-hero { justify-content: center; text-align: center; }
+    .za-actions, .za-links { justify-content: center; }
+    .za-timeline li { grid-template-columns: 1fr; gap: .1rem; }
   }
-  
-  .hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    color: var(--global-text-color);
-    margin-bottom: 20px;
-    line-height: 1.2;
-  }
-  
-  .hero-title span.accent {
-    color: var(--global-theme-color);
-    position: relative;
-    display: inline-block;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.15rem;
-    font-weight: 400;
-    color: var(--global-text-muted-color);
-    max-width: 750px;
-    margin: 0 auto 40px auto;
-    line-height: 1.7;
-  }
-
-  .highlight-badge {
-    display: inline-block;
-    background-color: rgba(46, 134, 193, 0.1);
-    color: var(--global-theme-color);
-    border: 1px solid rgba(46, 134, 193, 0.3);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-  }
-  
-  /* --- CTA Buttons --- */
-  .hero-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 60px;
-    flex-wrap: wrap;
-  }
-  
-  .btn-hero {
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    text-decoration: none !important;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .btn-hero-primary {
-    background-color: var(--global-theme-color);
-    color: #fff !important;
-    border: 2px solid var(--global-theme-color);
-    box-shadow: 0 8px 20px rgba(46, 134, 193, 0.25);
-  }
-  
-  .btn-hero-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(46, 134, 193, 0.4);
-  }
-  
-  .btn-hero-secondary {
-    background-color: transparent;
-    color: var(--global-text-color) !important;
-    border: 2px solid var(--global-divider-color);
-  }
-  
-  .btn-hero-secondary:hover {
-    border-color: var(--global-theme-color);
-    color: var(--global-theme-color) !important;
-    transform: translateY(-3px);
-  }
-
-  /* --- Expertise Cards --- */
-  .focus-cards {
-    margin-top: 40px;
-  }
-  
-  .focus-card {
-    padding: 35px 25px;
-    border-radius: 16px;
-    background-color: var(--global-card-bg-color);
-    border: 1px solid var(--global-divider-color);
-    text-align: center;
-    height: 100%;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-  }
-  
-  .focus-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border-color: var(--global-theme-color);
-  }
-  
-  .focus-icon {
-    font-size: 2.5rem;
-    color: var(--global-theme-color);
-    margin-bottom: 20px;
-  }
-  
-  .focus-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: var(--global-text-color);
-  }
-  
-  .focus-text {
-    font-size: 0.9rem;
-    color: var(--global-text-muted-color);
-    line-height: 1.6;
-  }
-</style> <div class="hero-container"> <div class="highlight-badge"> <i class="fas fa-trophy mr-1"></i> Ranked #3 in Data Science (Iran) by Favikon </div> <h1 class="hero-title">Bridging <span class="accent">Healthcare</span> &amp; <span class="accent">AI</span> </h1> <p class="hero-subtitle"> I am <strong>Zahra Amini</strong>, an AI Developer, Data Scientist, and Tech Educator. My research bridges advanced Machine Learning and clinical applications, focusing on Explainable AI (XAI), Medical Image Segmentation, and Time-Series Signal Processing. </p> <div class="hero-buttons"> <a href="/about/" class="btn-hero btn-hero-primary"> <i class="fas fa-user"></i> More About Me </a> <a href="/cv/" class="btn-hero btn-hero-secondary"> <i class="fas fa-file-pdf"></i> View Resume </a> <a href="/recommendations/" class="btn-hero btn-hero-secondary"> <i class="fas fa-award"></i> Recommendations </a> </div> </div> <hr style="border-top-color: var(--global-divider-color); margin: 20px 0 60px 0;"> <h3 style="font-weight: 800; text-align: center; margin-bottom: 40px; color: var(--global-text-color);">Core Expertise</h3> <div class="row row-cols-1 row-cols-md-3 g-4 focus-cards mb-5"> <div class="col"> <div class="focus-card"> <div class="focus-icon"><i class="fas fa-heartbeat"></i></div> <h3 class="focus-title">Biomedical AI &amp; XAI</h3> <p class="focus-text">Developing Explainable AI models for clinical decision support, including calibrated ML prediction systems for healthcare triage and anomaly detection.</p> </div> </div> <div class="col"> <div class="focus-card"> <div class="focus-icon"><i class="fas fa-cube"></i></div> <h3 class="focus-title">Advanced Computer Vision</h3> <p class="focus-text">Specializing in Medical Image Semantic Segmentation (U-Net) and large-scale 3D Point Cloud Processing using state-of-the-art Deep Learning architectures.</p> </div> </div> <div class="col"> <div class="focus-card"> <div class="focus-icon"><i class="fas fa-chalkboard-teacher"></i></div> <h3 class="focus-title">AI Education &amp; Leadership</h3> <p class="focus-text">Founder of Hobot Academy and lead author of "Introduction to AI in Healthcare." Mentored hundreds of students in deploying real-world machine learning models.</p> </div> </div> </div> <hr style="border-top-color: var(--global-divider-color); margin: 60px 0 40px 0;"> <h3 style="font-weight: 800; margin-bottom: 25px; color: var(--global-text-color);">Recent Updates</h3> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">Jan 15, 2016</th> <td> A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20"> </td> </tr> <tr> <th scope="row" style="width: 20%">Nov 07, 2015</th> <td> <a class="news-title" href="/news/announcement_2/">A long announcement with details</a> </td> </tr> <tr> <th scope="row" style="width: 20%">Oct 22, 2015</th> <td> A simple inline announcement. </td> </tr> </table> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Zahra Amini. </div> </footer> <script>
+</style> <section class="za-hero"> <img class="za-hero-photo" src="/assets/img/prof_pic.jpg" alt="Portrait of Zahra Amini"> <div class="za-hero-text"> <h1>Zahra Amini</h1> <p class="za-role">Machine learning researcher in healthcare AI</p> <span class="za-status">Seeking a fully funded PhD position in the UK, starting 2027</span> <p> I develop explainable, well-calibrated machine learning models for biomedical data: clinical tabular records, medical images and physiological signals. I currently work as a Research Assistant at the University of Staffordshire. </p> <div class="za-actions"> <a class="za-btn primary" href="/assets/pdf/CV-Zahra-Amini.pdf">Download CV</a> <a class="za-btn" href="#publications">Publications</a> <a class="za-btn" href="mailto:amini75zahra@gmail.com">Contact</a> </div> <div class="za-links"> <a href="mailto:amini75zahra@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a> <a href="https://orcid.org/YOUR-ORCID" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a> <a href="https://linkedin.com/in/zahraamini-ai" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a> <a href="https://github.com/aminizahra" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a> <a href="https://kaggle.com/aminizahra" target="_blank" rel="noopener" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a> </div> </div> </section> <section class="za-section" id="research"> <h2>Research interests</h2> <div class="za-grid"> <div class="za-card"> <h3>Explainable and calibrated clinical ML</h3> <p>Prediction models for clinical decision support whose probabilities can be trusted and whose decisions can be explained to clinicians.</p> <p class="za-more">Example: general anaesthesia triage in paediatric dentistry.</p> </div> <div class="za-card"> <h3>Medical image and 3D segmentation</h3> <p>Deep learning for semantic segmentation, from U-Net on medical images to superpoint graphs on large-scale 3D point clouds.</p> <p class="za-more">Example: B.Sc. thesis on point cloud segmentation.</p> </div> <div class="za-card"> <h3>Time-series and anomaly detection</h3> <p>Signal processing and unsupervised models for sensor and bio-signal data, including predictive maintenance in heavy industry.</p> <p class="za-more">Example: Isolation Forest models at NICICO.</p> </div> </div> </section> <section class="za-section" id="publications"> <h2>Selected publications</h2> <div class="za-grid"> <div class="za-card"> <span class="za-tag pending">Under review</span> <h3>A calibrated prediction model for general anaesthesia triage in paediatric dentistry</h3> <p>Sadegh-Zadeh S.-A., Bagheri M., <b>Amini Z.</b>, Saadat S., Barati M. A., Jarchi D.</p> <p class="za-more">Development, explainability and preliminary external evaluation.</p> </div> <div class="za-card"> <span class="za-tag pending">In press</span> <h3>Introduction to Artificial Intelligence in Healthcare</h3> <p><b>Amini Z.</b> (lead author) et al. Shahid Beheshti University of Medical Sciences Press.</p> <p class="za-more">Textbook for medical students and professionals.</p> </div> <div class="za-card"> <span class="za-tag">B.Sc. thesis, 20/20</span> <h3>Large-scale semantic point cloud segmentation with superpoint graphs</h3> <p><b>Amini Z.</b> Supervised by Dr. Amir Salarpour, Sirjan University of Technology, 2020.</p> </div> </div> <p style="margin-top:1rem"><a href="/publications/">All publications</a></p> </section> <section class="za-section" id="projects"> <h2>Selected projects</h2> <div class="za-grid"> <div class="za-card"> <h3>Project title (explainable ML)</h3> <p>One sentence on the problem, one on the method, one on the result.</p> <a class="za-more" href="https://github.com/aminizahra" rel="external nofollow noopener" target="_blank">Code on GitHub</a> </div> <div class="za-card"> <h3>Project title (medical image segmentation)</h3> <p>One sentence on the problem, one on the method, one on the result.</p> <a class="za-more" href="https://github.com/aminizahra" rel="external nofollow noopener" target="_blank">Code on GitHub</a> </div> <div class="za-card"> <h3>Project title (time-series)</h3> <p>One sentence on the problem, one on the method, one on the result.</p> <a class="za-more" href="https://github.com/aminizahra" rel="external nofollow noopener" target="_blank">Code on GitHub</a> </div> </div> <p style="margin-top:1rem"><a href="/projects/">All projects</a></p> </section> <section class="za-section" id="experience"> <h2>Research experience</h2> <ul class="za-timeline"> <li> <span class="za-date">2024 to present</span> <div> <b>Research Assistant</b>, University of Staffordshire<br> Supervisor: Dr. Seyed-Ali Sadegh-Zadeh. Calibrated, explainable triage model on clinical tabular data.</div> </li> <li> <span class="za-date">2024 and 2025</span> <div> <b>Data Scientist and Research Consultant</b>, NICICO<br> Anomaly detection and predictive maintenance on sensor time series; an LLM assistant over internal technical documents.</div> </li> <li> <span class="za-date">2019 to 2021</span> <div> <b>Research Assistant and thesis student</b>, Sirjan University of Technology<br> Supervisor: Dr. Amir Salarpour. Scalable 3D point cloud segmentation.</div> </li> </ul> <p style="margin-top:.8rem"><a href="/cv/">Full CV</a></p> </section> <section class="za-section" id="impact"> <h2>Teaching and impact</h2> <div class="za-stats"> <div class="za-stat"> <b>200+</b><span>medical students taught in Neuro-AI</span> </div> <div class="za-stat"> <b>200+</b><span>students mentored in the AI scholarship</span> </div> <div class="za-stat"> <b>Master</b><span>Kaggle, 2021 to 2025</span> </div> <div class="za-stat"> <b>#3</b><span>Data Science in Iran, Favikon 2025</span> </div> </div> <p style="margin-top:1.1rem"> I founded Hobot Academy and have taught machine learning, deep learning and applied mathematics since 2022. <a href="/teaching/">Courses and notes</a> </p> </section> <section class="za-section" id="news"> <h2>News</h2> <ul class="za-timeline"> <li> <span class="za-date">2026</span><div>Paediatric dentistry triage manuscript submitted for review.</div> </li> <li> <span class="za-date">2026</span><div>Textbook <i>Introduction to Artificial Intelligence in Healthcare</i> accepted by SBMU Press.</div> </li> <li> <span class="za-date">2025</span><div>Named "The AI Luminary" and ranked #3 in Data Science (Iran) by Favikon.</div> </li> </ul> </section> <section class="za-section" id="recommendations"> <h2>Recommendations</h2> <blockquote class="za-quote"> Short excerpt from a recommendation letter. <footer>Name, title, institution</footer> </blockquote> <a href="/recommendations/">Read all recommendations</a> </section> <section class="za-section" id="contact"> <div class="za-contact"> <h2 style="border:0;margin-bottom:.6rem">Open to PhD opportunities in healthcare AI</h2> <p>If our research interests align, I would be glad to hear from you.</p> <div class="za-actions" style="justify-content:center"> <a class="za-btn primary" href="mailto:amini75zahra@gmail.com">Email me</a> <a class="za-btn" href="/assets/pdf/CV-Zahra-Amini.pdf">Download CV</a> </div> </div> </section> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Zahra Amini. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
@@ -154,7 +63,7 @@ ninja.data = [{
     },
   },{id: "nav-home",
           title: "Home",
-          description: "",
+          description: "Zahra Amini - Machine learning researcher in healthcare AI",
           section: "Navigation",
           handler: () => {
             window.location.href = "/";
