@@ -218,7 +218,7 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
     <p>I am applying to programmes across Europe. If our research interests align, I would be glad to hear from you.</p>
     <div class="za-actions" style="justify-content:center">
       <a class="za-btn primary" href="mailto:amini75zahra@gmail.com">Email me</a>
-      <a class="za-btn" href="{{ '/assets/pdf/CV-Zahra-Amini.pdf' | relative_url }}">Download CV</a>
+      <a class="za-btn primary" href="{{ 'assets/pdf/CV-ZahraAmini.pdf' | relative_url }}">Download CV</a>
     </div>
   </div>
 </section>
