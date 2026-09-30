@@ -114,7 +114,7 @@ This course was designed and taught by me at Hobot Academy. It gives students a 
 ## Resources
 
 - [Course repository on GitHub](https://github.com/hobotacademy/Python-for-AI) with source code, Jupyter notebooks and exercises
-- [Video lectures on YouTube](https://www.youtube.com/@HobotAcademy)
+<!-- - [Video lectures on YouTube](https://www.youtube.com/@HobotAcademy) -->
 - [Course page on Hobot Academy (Persian)](https://hobotacademy.com/product/py/)
 
 ## How to Use the Materials
