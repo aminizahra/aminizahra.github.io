@@ -203,102 +203,85 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
 <!-- ============ 8. RECOMMENDATIONS ============ -->
 <section class="za-section" id="recommendations">
 <style>
-  .rcs-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: .9rem; font-size: .95rem; }
-  .rcs-arrows { display: flex; gap: .4rem; }
-  .rcs-arrow { width: 2rem; height: 2rem; padding: 0; border: 1px solid var(--global-divider-color); border-radius: 50%; background: transparent; color: var(--global-text-color); cursor: pointer; line-height: 1; }
-  .rcs-arrow:hover:not(:disabled) { border-color: var(--global-theme-color); color: var(--global-theme-color); }
-  .rcs-arrow:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
-  .rcs-arrow:disabled { opacity: .35; cursor: default; }
-  .rcs-track { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: .2rem 0 .4rem; }
-  .rcs-track::-webkit-scrollbar { display: none; }
-  .rcs-card { flex: 0 0 calc((100% - 2rem) / 3); min-width: 250px; scroll-snap-align: start; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1.5rem 1rem 0; border: 1px solid var(--global-divider-color); border-radius: 14px; background: var(--global-card-bg-color); }
-  .rcs-avatar { position: relative; width: 96px; height: 96px; margin-bottom: 1rem; border-radius: 50%; box-shadow: 0 0 0 3px var(--global-theme-color); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.4rem; color: var(--global-text-color-light); background: var(--global-bg-color); }
-  .rcs-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-  .rcs-logo { position: absolute; right: -4px; bottom: -4px; width: 30px; height: 30px; padding: 2px; object-fit: contain; border-radius: 50%; background: #fff; border: 1px solid var(--global-divider-color); }
-  .rcs-name { font-size: 1.05rem; font-weight: 600; margin: 0 0 .3rem; }
-  .rcs-title { font-size: .85rem; line-height: 1.35; min-height: 2.7em; margin: 0 0 .9rem; }
-  .rcs-as { width: 100%; min-height: 3.6rem; display: flex; flex-direction: column; justify-content: center; gap: .15rem; padding: .55rem .6rem; border-radius: 8px; background: rgba(127, 127, 127, .09); }
-  .rcs-as em { font-size: .8rem; }
-  .rcs-as strong { font-size: .72rem; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--global-theme-color); }
-  .rcs-letter { display: inline-flex; align-items: center; gap: .4rem; margin: .9rem 0 1.1rem; padding: .25rem .85rem; font-size: .75rem; border: 1px solid var(--global-theme-color); border-radius: 999px; color: var(--global-theme-color); text-decoration: none; }
-  .rcs-letter:hover { background: var(--global-theme-color); color: var(--global-bg-color); text-decoration: none; }
-  .rcs-profile { width: 100%; margin-top: auto; padding: .85rem 0; border-top: 1px dashed var(--global-divider-color); font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--global-text-color); text-decoration: none; }
-  .rcs-profile:hover { color: var(--global-theme-color); text-decoration: none; }
-  @media (max-width: 768px) { .rcs-card { flex-basis: 82%; } }
+  #recommendations .rs-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: .6rem; font-size: .95rem; }
+  #recommendations .rs-arrows { display: flex; gap: .4rem; }
+  #recommendations .rs-arrow { width: 2rem; height: 2rem; padding: 0; border: 1px solid var(--global-divider-color); border-radius: 50%; background: transparent; color: var(--global-text-color); cursor: pointer; line-height: 1; }
+  #recommendations .rs-arrow:hover:not(:disabled) { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  #recommendations .rs-arrow:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+  #recommendations .rs-arrow:disabled { opacity: .35; cursor: default; }
+  #recommendations .rs-track { display: flex; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 14px 4px 24px; }
+  #recommendations .rs-track::-webkit-scrollbar { display: none; }
+  #recommendations a.rs-slide { flex: 0 0 calc((100% - 2.5rem) / 3); min-width: 250px; scroll-snap-align: start; display: flex; }
+  @media (max-width: 768px) { #recommendations a.rs-slide { flex-basis: 82%; } }
+
+  /* Same card design as the Recommendations page */
+  #recommendations .mentor-card { background-color: var(--global-card-bg-color); border: 1px solid var(--global-divider-color); border-radius: 20px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); overflow: hidden; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 30px 15px 15px 15px; text-align: center; position: relative; }
+  #recommendations .mentor-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); border-color: var(--global-theme-color); }
+  #recommendations .mentor-img-wrapper { position: relative; margin-bottom: 15px; width: 100px; height: 100px; }
+  #recommendations .mentor-img-wrapper img.main-profile { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid var(--global-card-bg-color); outline: 2px solid var(--global-theme-color); box-shadow: 0 8px 20px rgba(0,0,0,0.12); transition: transform 0.4s ease; }
+  #recommendations .inst-badge-logo { position: absolute; bottom: -4px; right: -4px; width: 36px; height: 36px; background-color: #ffffff; border-radius: 50%; padding: 4px; border: 2px solid var(--global-card-bg-color); box-shadow: 0 4px 10px rgba(0,0,0,0.2); object-fit: contain; z-index: 5; transition: transform 0.3s ease; }
+  #recommendations .mentor-card:hover .mentor-img-wrapper img.main-profile { transform: scale(1.05); }
+  #recommendations .mentor-card:hover .inst-badge-logo { transform: scale(1.15); }
+  #recommendations .mentor-name { font-weight: 700; font-size: 1.15rem; color: var(--global-text-color); margin-bottom: 6px; }
+  #recommendations .mentor-desc { font-size: 0.85rem; font-weight: 500; color: var(--global-text-muted-color); line-height: 1.4; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; padding: 0 5px; }
+  #recommendations .mentor-relation { font-size: 0.85rem; margin-bottom: 18px; line-height: 1.4; padding: 10px; background-color: rgba(128, 128, 128, 0.05); border-radius: 12px; width: 100%; }
+  #recommendations .relation-label { color: var(--global-text-muted-color); font-weight: 500; font-size: 0.8rem; font-style: italic; }
+  #recommendations .relation-value { color: var(--global-theme-color); font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0px; display: block; margin-top: 4px; }
+  #recommendations .mentor-badge { background-color: transparent; color: var(--global-theme-color); border: 1px solid var(--global-theme-color); font-weight: 600; padding: 5px 12px; border-radius: 30px; font-size: 0.7rem; margin-bottom: 20px; display: inline-block; }
+  #recommendations .view-profile-btn { margin-top: auto; width: 100%; padding-top: 15px; border-top: 1px dashed var(--global-divider-color); }
+  #recommendations .view-profile-btn span { font-size: 0.8rem; font-weight: 700; color: var(--global-text-muted-color); text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s ease; }
+  #recommendations .mentor-card:hover .view-profile-btn span { color: var(--global-theme-color); }
+  #recommendations a.mentor-link-wrapper { text-decoration: none !important; color: inherit !important; }
 </style>
 <h2>Recommendations</h2>
-<div class="rcs-bar">
+<div class="rs-bar">
   <a href="{{ '/recommendations/' | relative_url }}">View all recommendations</a>
-  <div class="rcs-arrows">
-    <button class="rcs-arrow" id="rcs-prev" type="button" aria-label="Previous">&#8592;</button>
-    <button class="rcs-arrow" id="rcs-next" type="button" aria-label="Next">&#8594;</button>
+  <div class="rs-arrows">
+    <button class="rs-arrow" id="rs-prev" type="button" aria-label="Previous">&#8592;</button>
+    <button class="rs-arrow" id="rs-next" type="button" aria-label="Next">&#8594;</button>
   </div>
 </div>
-<!-- TODO for every card below:
-     1. photo:  src of <img class="rcs-photo">  (same image your Recommendations page uses)
-     2. logo:   src of <img class="rcs-logo">   (institution logo)
-     3. letter: href of <a class="rcs-letter">  (direct letter URL; it opens the Recommendations page for now)
-     If a photo or logo file is missing, it is hidden (initials show instead). -->
-<div class="rcs-track" id="rcs-track">
-  <div class="rcs-card">
-    <div class="rcs-avatar"><span>AP</span><img class="rcs-photo" src="{{ '/assets/img/people/ahmad-pouramini.jpg' | relative_url }}" alt="Dr. Ahmad Pouramini" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/sirjan.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
-    <h3 class="rcs-name">Dr. Ahmad Pouramini</h3>
-    <p class="rcs-title">Assistant Professor at Sirjan University of Technology</p>
-    <div class="rcs-as"><em>Supervised me as:</em><strong>Teaching Assistant &amp; Student</strong></div>
-    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
-    <a class="rcs-profile" href="{{ '/people/ahmad-pouramini/' | relative_url }}">View Profile &rarr;</a>
+{% assign rs_categories = site.people | map: "category" | compact | uniq %}
+<div class="rs-track" id="rs-track">
+{% for category in rs_categories %}
+{% for person in site.people %}
+{% if person.category == category %}
+<a href="{{ person.url | relative_url }}" class="mentor-link-wrapper rs-slide">
+  <div class="mentor-card">
+    <div class="mentor-img-wrapper">
+      <img src="{{ person.img | relative_url }}" class="main-profile" alt="{{ person.title }}">
+      {% if person.university_logo %}
+      <img src="{{ person.university_logo | relative_url }}" class="inst-badge-logo" alt="Institution Logo" title="Institution">
+      {% endif %}
+    </div>
+    <h3 class="mentor-name">{{ person.title }}</h3>
+    <p class="mentor-desc">{{ person.description | split: '|' | first | strip }}</p>
+    {% if person.relation %}
+    <div class="mentor-relation">
+      <span class="relation-label">Supervised me as:</span>
+      <span class="relation-value">{{ person.relation }}</span>
+    </div>
+    {% endif %}
+    {% if person.badge %}
+    <div class="mentor-badge"><i class="fas fa-award mr-1"></i> {{ person.badge }}</div>
+    {% endif %}
+    <div class="view-profile-btn"><span>View Profile &rarr;</span></div>
   </div>
-  <div class="rcs-card">
-    <div class="rcs-avatar"><span>AS</span><img class="rcs-photo" src="{{ '/assets/img/people/amir-salarpour.jpg' | relative_url }}" alt="Dr. Amir Salarpour" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/clemson.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
-    <h3 class="rcs-name">Dr. Amir Salarpour</h3>
-    <p class="rcs-title">PostDoctoral Researcher at Clemson University</p>
-    <div class="rcs-as"><em>Supervised me as:</em><strong>Research Assistant, Teaching Assistant &amp; Thesis Student</strong></div>
-    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
-    <a class="rcs-profile" href="{{ '/people/amir-salarpour/' | relative_url }}">View Profile &rarr;</a>
-  </div>
-  <div class="rcs-card">
-    <div class="rcs-avatar"><span>SK</span><img class="rcs-photo" src="{{ '/assets/img/people/somayeh-khajehasani.jpg' | relative_url }}" alt="Somayeh Khajehasani" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/sirjan.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
-    <h3 class="rcs-name">Somayeh Khajehasani</h3>
-    <p class="rcs-title">Lecturer at Sirjan University of Technology</p>
-    <div class="rcs-as"><em>Supervised me as:</em><strong>Teaching Assistant &amp; Student</strong></div>
-    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
-    <a class="rcs-profile" href="{{ '/people/somayeh-khajehasani/' | relative_url }}">View Profile &rarr;</a>
-  </div>
-  <div class="rcs-card">
-    <div class="rcs-avatar"><span>HS</span><img class="rcs-photo" src="{{ '/assets/img/people/hossein-sameti.jpg' | relative_url }}" alt="Dr. Hossein Sameti" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/sharif.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
-    <h3 class="rcs-name">Dr. Hossein Sameti</h3>
-    <p class="rcs-title">Associate Professor at Sharif University of Technology</p>
-    <div class="rcs-as"><em>Supervised me as:</em><strong>Colleague &amp; AI Instructor</strong></div>
-    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
-    <a class="rcs-profile" href="{{ '/people/hossein-sameti/' | relative_url }}">View Profile &rarr;</a>
-  </div>
-  <div class="rcs-card">
-    <div class="rcs-avatar"><span>MA</span><img class="rcs-photo" src="{{ '/assets/img/people/mahmoud-alipour.jpg' | relative_url }}" alt="Mahmoud Alipour" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/jetco.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
-    <h3 class="rcs-name">Mahmoud Alipour</h3>
-    <p class="rcs-title">Head of ADAS Group at JETCO</p>
-    <div class="rcs-as"><em>Supervised me as:</em><strong>Teaching Assistant</strong></div>
-    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
-    <a class="rcs-profile" href="{{ '/people/mahmoud-alipour/' | relative_url }}">View Profile &rarr;</a>
-  </div>
-  <div class="rcs-card">
-    <div class="rcs-avatar"><span>PH</span><img class="rcs-photo" src="{{ '/assets/img/people/pooria-haddad.jpg' | relative_url }}" alt="Pooria Haddad" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/filoger.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
-    <h3 class="rcs-name">Pooria Haddad</h3>
-    <p class="rcs-title">Head of Filoger Artificial Intelligence Company</p>
-    <div class="rcs-as"><em>Supervised me as:</em><strong>Lecturer &amp; AI Mentor</strong></div>
-    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Work Experience Certificate</a>
-    <a class="rcs-profile" href="{{ '/people/pooria-haddad-filoger/' | relative_url }}">View Profile &rarr;</a>
-  </div>
+</a>
+{% endif %}
+{% endfor %}
+{% endfor %}
 </div>
 <script>
   (function () {
-    var track = document.getElementById('rcs-track');
-    var prev = document.getElementById('rcs-prev');
-    var next = document.getElementById('rcs-next');
+    var track = document.getElementById('rs-track');
+    var prev = document.getElementById('rs-prev');
+    var next = document.getElementById('rs-next');
     if (!track || !prev || !next) return;
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function step(dir) {
-      var card = track.querySelector('.rcs-card');
-      var w = card ? card.getBoundingClientRect().width + 16 : 300;
+      var slide = track.querySelector('.rs-slide');
+      var w = slide ? slide.getBoundingClientRect().width + 20 : 300;
       track.scrollBy({ left: dir * w, behavior: reduce ? 'auto' : 'smooth' });
     }
     function update() {
