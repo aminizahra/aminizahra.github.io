@@ -3,7 +3,8 @@ layout: course
 title: Python for AI
 description: A hands-on Python course built for artificial intelligence, machine learning and data science. It goes from Python basics to NumPy, Pandas, Matplotlib and regular expressions, and ends with a final project.
 instructor: Zahra Amini
-year: 2024 # TODO: confirm the year (your CV lists Hobot Academy courses from Oct 2024); it decides which year heading the card appears under
+year: 2024 # TODO: confirm or remove; the Teaching page is now grouped by category, not by year
+category: Prerequisites # one of: Prerequisites, Data Science, Computer Vision, NLP
 term: Online # TODO: replace with a term such as Fall, or keep "Online"
 location: Online, Hobot Academy
 time: Self-paced video lectures
