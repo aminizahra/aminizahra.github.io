@@ -69,8 +69,8 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
     <div class="za-links">
       <!-- TODO: add your Google Scholar and ORCID URLs -->
       <a href="mailto:amini75zahra@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-      <a href="https://orcid.org/YOUR-ORCID" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a>
+      <!-- <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a> -->
+      <!-- <a href="https://orcid.org/YOUR-ORCID" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a> -->
       <a href="https://linkedin.com/in/zahraamini-ai" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/aminizahra" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
       <a href="https://kaggle.com/aminizahra" target="_blank" rel="noopener" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
