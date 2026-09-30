@@ -2,7 +2,7 @@
 layout: page
 title: Home
 permalink: /
-nav: true
+nav: false
 nav_order: 1
 description: Zahra Amini - Machine learning researcher in healthcare AI
 ---
