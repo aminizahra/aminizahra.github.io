@@ -202,82 +202,103 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
 
 <!-- ============ 8. RECOMMENDATIONS ============ -->
 <section class="za-section" id="recommendations">
-  <h2>Recommendations</h2>
-  <div class="rec-bar">
-    <a href="{{ '/recommendations/' | relative_url }}">View all recommendations</a>
-    <div class="rec-arrows">
-      <button class="rec-arrow" id="rec-prev" type="button" aria-label="Previous">&#8592;</button>
-      <button class="rec-arrow" id="rec-next" type="button" aria-label="Next">&#8594;</button>
-    </div>
+<style>
+  .rcs-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: .9rem; font-size: .95rem; }
+  .rcs-arrows { display: flex; gap: .4rem; }
+  .rcs-arrow { width: 2rem; height: 2rem; padding: 0; border: 1px solid var(--global-divider-color); border-radius: 50%; background: transparent; color: var(--global-text-color); cursor: pointer; line-height: 1; }
+  .rcs-arrow:hover:not(:disabled) { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  .rcs-arrow:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+  .rcs-arrow:disabled { opacity: .35; cursor: default; }
+  .rcs-track { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: .2rem 0 .4rem; }
+  .rcs-track::-webkit-scrollbar { display: none; }
+  .rcs-card { flex: 0 0 calc((100% - 2rem) / 3); min-width: 250px; scroll-snap-align: start; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1.5rem 1rem 0; border: 1px solid var(--global-divider-color); border-radius: 14px; background: var(--global-card-bg-color); }
+  .rcs-avatar { position: relative; width: 96px; height: 96px; margin-bottom: 1rem; border-radius: 50%; box-shadow: 0 0 0 3px var(--global-theme-color); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.4rem; color: var(--global-text-color-light); background: var(--global-bg-color); }
+  .rcs-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .rcs-logo { position: absolute; right: -4px; bottom: -4px; width: 30px; height: 30px; padding: 2px; object-fit: contain; border-radius: 50%; background: #fff; border: 1px solid var(--global-divider-color); }
+  .rcs-name { font-size: 1.05rem; font-weight: 600; margin: 0 0 .3rem; }
+  .rcs-title { font-size: .85rem; line-height: 1.35; min-height: 2.7em; margin: 0 0 .9rem; }
+  .rcs-as { width: 100%; min-height: 3.6rem; display: flex; flex-direction: column; justify-content: center; gap: .15rem; padding: .55rem .6rem; border-radius: 8px; background: rgba(127, 127, 127, .09); }
+  .rcs-as em { font-size: .8rem; }
+  .rcs-as strong { font-size: .72rem; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--global-theme-color); }
+  .rcs-letter { display: inline-flex; align-items: center; gap: .4rem; margin: .9rem 0 1.1rem; padding: .25rem .85rem; font-size: .75rem; border: 1px solid var(--global-theme-color); border-radius: 999px; color: var(--global-theme-color); text-decoration: none; }
+  .rcs-letter:hover { background: var(--global-theme-color); color: var(--global-bg-color); text-decoration: none; }
+  .rcs-profile { width: 100%; margin-top: auto; padding: .85rem 0; border-top: 1px dashed var(--global-divider-color); font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--global-text-color); text-decoration: none; }
+  .rcs-profile:hover { color: var(--global-theme-color); text-decoration: none; }
+  @media (max-width: 768px) { .rcs-card { flex-basis: 82%; } }
+</style>
+<h2>Recommendations</h2>
+<div class="rcs-bar">
+  <a href="{{ '/recommendations/' | relative_url }}">View all recommendations</a>
+  <div class="rcs-arrows">
+    <button class="rcs-arrow" id="rcs-prev" type="button" aria-label="Previous">&#8592;</button>
+    <button class="rcs-arrow" id="rcs-next" type="button" aria-label="Next">&#8594;</button>
   </div>
-
-  <!-- TODO: set each photo path to the image your recommendations page uses.
-       If a photo is missing, the initials are shown instead.
-       TODO: each letter link currently opens the Recommendations page; replace with the direct letter URL if you prefer. -->
-  <div class="rec-track" id="rec-track">
-
-    <div class="rec-item">
-      <div class="rec-avatar">AP<img src="{{ '/assets/img/recommendations/ahmad-pouramini.jpg' | relative_url }}" alt="Dr. Ahmad Pouramini" onerror="this.remove()"></div>
-      <p class="rec-name">Dr. Ahmad Pouramini</p>
-      <p class="rec-role">Assistant Professor at Sirjan University of Technology</p>
-      <p class="rec-as">Supervised me as: Teaching Assistant &amp; Student</p>
-      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
-    </div>
-
-    <div class="rec-item">
-      <div class="rec-avatar">AS<img src="{{ '/assets/img/recommendations/amir-salarpour.jpg' | relative_url }}" alt="Dr. Amir Salarpour" onerror="this.remove()"></div>
-      <p class="rec-name">Dr. Amir Salarpour</p>
-      <p class="rec-role">Postdoctoral Researcher at Clemson University</p>
-      <p class="rec-as">Supervised me as: Research Assistant, Teaching Assistant &amp; Thesis Student</p>
-      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
-    </div>
-
-    <div class="rec-item">
-      <div class="rec-avatar">SK<img src="{{ '/assets/img/recommendations/somayeh-khajehasani.jpg' | relative_url }}" alt="Somayeh Khajehasani" onerror="this.remove()"></div>
-      <p class="rec-name">Somayeh Khajehasani</p>
-      <p class="rec-role">Lecturer at Sirjan University of Technology</p>
-      <p class="rec-as">Supervised me as: Teaching Assistant &amp; Student</p>
-      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
-    </div>
-
-    <div class="rec-item">
-      <div class="rec-avatar">HS<img src="{{ '/assets/img/recommendations/hossein-sameti.jpg' | relative_url }}" alt="Dr. Hossein Sameti" onerror="this.remove()"></div>
-      <p class="rec-name">Dr. Hossein Sameti</p>
-      <p class="rec-role">Associate Professor at Sharif University of Technology</p>
-      <p class="rec-as">Supervised me as: Colleague &amp; AI Instructor</p>
-      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
-    </div>
-
-    <div class="rec-item">
-      <div class="rec-avatar">MA<img src="{{ '/assets/img/recommendations/mahmoud-alipour.jpg' | relative_url }}" alt="Mahmoud Alipour" onerror="this.remove()"></div>
-      <p class="rec-name">Mahmoud Alipour</p>
-      <p class="rec-role">Head of ADAS Group at JETCO</p>
-      <p class="rec-as">Supervised me as: Teaching Assistant</p>
-      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
-    </div>
-
-    <div class="rec-item">
-      <div class="rec-avatar">PH<img src="{{ '/assets/img/recommendations/pooria-haddad.jpg' | relative_url }}" alt="Pooria Haddad" onerror="this.remove()"></div>
-      <p class="rec-name">Pooria Haddad</p>
-      <p class="rec-role">Head of Filoger Artificial Intelligence Company</p>
-      <p class="rec-as">Supervised me as: Lecturer &amp; AI Mentor</p>
-      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Work experience certificate</a>
-    </div>
-
+</div>
+<!-- TODO for every card below:
+     1. photo:  src of <img class="rcs-photo">  (same image your Recommendations page uses)
+     2. logo:   src of <img class="rcs-logo">   (institution logo)
+     3. letter: href of <a class="rcs-letter">  (direct letter URL; it opens the Recommendations page for now)
+     If a photo or logo file is missing, it is hidden (initials show instead). -->
+<div class="rcs-track" id="rcs-track">
+  <div class="rcs-card">
+    <div class="rcs-avatar"><span>AP</span><img class="rcs-photo" src="{{ '/assets/img/people/ahmad-pouramini.jpg' | relative_url }}" alt="Dr. Ahmad Pouramini" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/sirjan.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
+    <h3 class="rcs-name">Dr. Ahmad Pouramini</h3>
+    <p class="rcs-title">Assistant Professor at Sirjan University of Technology</p>
+    <div class="rcs-as"><em>Supervised me as:</em><strong>Teaching Assistant &amp; Student</strong></div>
+    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
+    <a class="rcs-profile" href="{{ '/people/ahmad-pouramini/' | relative_url }}">View Profile &rarr;</a>
   </div>
-</section>
-
+  <div class="rcs-card">
+    <div class="rcs-avatar"><span>AS</span><img class="rcs-photo" src="{{ '/assets/img/people/amir-salarpour.jpg' | relative_url }}" alt="Dr. Amir Salarpour" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/clemson.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
+    <h3 class="rcs-name">Dr. Amir Salarpour</h3>
+    <p class="rcs-title">PostDoctoral Researcher at Clemson University</p>
+    <div class="rcs-as"><em>Supervised me as:</em><strong>Research Assistant, Teaching Assistant &amp; Thesis Student</strong></div>
+    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
+    <a class="rcs-profile" href="{{ '/people/amir-salarpour/' | relative_url }}">View Profile &rarr;</a>
+  </div>
+  <div class="rcs-card">
+    <div class="rcs-avatar"><span>SK</span><img class="rcs-photo" src="{{ '/assets/img/people/somayeh-khajehasani.jpg' | relative_url }}" alt="Somayeh Khajehasani" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/sirjan.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
+    <h3 class="rcs-name">Somayeh Khajehasani</h3>
+    <p class="rcs-title">Lecturer at Sirjan University of Technology</p>
+    <div class="rcs-as"><em>Supervised me as:</em><strong>Teaching Assistant &amp; Student</strong></div>
+    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
+    <a class="rcs-profile" href="{{ '/people/somayeh-khajehasani/' | relative_url }}">View Profile &rarr;</a>
+  </div>
+  <div class="rcs-card">
+    <div class="rcs-avatar"><span>HS</span><img class="rcs-photo" src="{{ '/assets/img/people/hossein-sameti.jpg' | relative_url }}" alt="Dr. Hossein Sameti" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/sharif.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
+    <h3 class="rcs-name">Dr. Hossein Sameti</h3>
+    <p class="rcs-title">Associate Professor at Sharif University of Technology</p>
+    <div class="rcs-as"><em>Supervised me as:</em><strong>Colleague &amp; AI Instructor</strong></div>
+    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
+    <a class="rcs-profile" href="{{ '/people/hossein-sameti/' | relative_url }}">View Profile &rarr;</a>
+  </div>
+  <div class="rcs-card">
+    <div class="rcs-avatar"><span>MA</span><img class="rcs-photo" src="{{ '/assets/img/people/mahmoud-alipour.jpg' | relative_url }}" alt="Mahmoud Alipour" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/jetco.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
+    <h3 class="rcs-name">Mahmoud Alipour</h3>
+    <p class="rcs-title">Head of ADAS Group at JETCO</p>
+    <div class="rcs-as"><em>Supervised me as:</em><strong>Teaching Assistant</strong></div>
+    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Recommendation Letter</a>
+    <a class="rcs-profile" href="{{ '/people/mahmoud-alipour/' | relative_url }}">View Profile &rarr;</a>
+  </div>
+  <div class="rcs-card">
+    <div class="rcs-avatar"><span>PH</span><img class="rcs-photo" src="{{ '/assets/img/people/pooria-haddad.jpg' | relative_url }}" alt="Pooria Haddad" onerror="this.remove()"><img class="rcs-logo" src="{{ '/assets/img/logos/filoger.png' | relative_url }}" alt="Institution logo" onerror="this.remove()"></div>
+    <h3 class="rcs-name">Pooria Haddad</h3>
+    <p class="rcs-title">Head of Filoger Artificial Intelligence Company</p>
+    <div class="rcs-as"><em>Supervised me as:</em><strong>Lecturer &amp; AI Mentor</strong></div>
+    <a class="rcs-letter" href="{{ '/recommendations/' | relative_url }}"><i class="fa-solid fa-award"></i> Work Experience Certificate</a>
+    <a class="rcs-profile" href="{{ '/people/pooria-haddad-filoger/' | relative_url }}">View Profile &rarr;</a>
+  </div>
+</div>
 <script>
   (function () {
-    var track = document.getElementById('rec-track');
-    var prev = document.getElementById('rec-prev');
-    var next = document.getElementById('rec-next');
+    var track = document.getElementById('rcs-track');
+    var prev = document.getElementById('rcs-prev');
+    var next = document.getElementById('rcs-next');
     if (!track || !prev || !next) return;
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
     function step(dir) {
-      var item = track.querySelector('.rec-item');
-      var w = item ? item.getBoundingClientRect().width + 16 : 300;
+      var card = track.querySelector('.rcs-card');
+      var w = card ? card.getBoundingClientRect().width + 16 : 300;
       track.scrollBy({ left: dir * w, behavior: reduce ? 'auto' : 'smooth' });
     }
     function update() {
@@ -291,6 +312,7 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
     update();
   })();
 </script>
+</section>
 
 <!-- ============ 9. CONTACT ============ -->
 <section class="za-section" id="contact">
