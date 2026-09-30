@@ -61,7 +61,7 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
       clinical tabular records, medical images and physiological signals.
     </p>
     <div class="za-actions">
-      <a class="za-btn primary" href="{{ 'assets/pdf/CV-ZahraAmini.pdf' | relative_url }}">Download CV</a>
+      <a class="za-btn" href="{{ 'assets/pdf/CV-ZahraAmini.pdf' | relative_url }}">Download CV</a>
       <a class="za-btn" href="#research-outputs">Research outputs</a>
       <a class="za-btn" href="mailto:amini75zahra@gmail.com">Contact</a>
     </div>
