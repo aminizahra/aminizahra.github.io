@@ -203,13 +203,94 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
 <!-- ============ 8. RECOMMENDATIONS ============ -->
 <section class="za-section" id="recommendations">
   <h2>Recommendations</h2>
-  <!-- TODO: use short excerpts only with the writer's permission -->
-  <blockquote class="za-quote">
-    Short excerpt from a recommendation letter.
-    <footer>Name, title, institution</footer>
-  </blockquote>
-  <a href="{{ '/recommendations/' | relative_url }}">Read all recommendations</a>
+  <div class="rec-bar">
+    <a href="{{ '/recommendations/' | relative_url }}">View all recommendations</a>
+    <div class="rec-arrows">
+      <button class="rec-arrow" id="rec-prev" type="button" aria-label="Previous">&#8592;</button>
+      <button class="rec-arrow" id="rec-next" type="button" aria-label="Next">&#8594;</button>
+    </div>
+  </div>
+
+  <!-- TODO: set each photo path to the image your recommendations page uses.
+       If a photo is missing, the initials are shown instead.
+       TODO: each letter link currently opens the Recommendations page; replace with the direct letter URL if you prefer. -->
+  <div class="rec-track" id="rec-track">
+
+    <div class="rec-item">
+      <div class="rec-avatar">AP<img src="{{ '/assets/img/recommendations/ahmad-pouramini.jpg' | relative_url }}" alt="Dr. Ahmad Pouramini" onerror="this.remove()"></div>
+      <p class="rec-name">Dr. Ahmad Pouramini</p>
+      <p class="rec-role">Assistant Professor at Sirjan University of Technology</p>
+      <p class="rec-as">Supervised me as: Teaching Assistant &amp; Student</p>
+      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
+    </div>
+
+    <div class="rec-item">
+      <div class="rec-avatar">AS<img src="{{ '/assets/img/recommendations/amir-salarpour.jpg' | relative_url }}" alt="Dr. Amir Salarpour" onerror="this.remove()"></div>
+      <p class="rec-name">Dr. Amir Salarpour</p>
+      <p class="rec-role">Postdoctoral Researcher at Clemson University</p>
+      <p class="rec-as">Supervised me as: Research Assistant, Teaching Assistant &amp; Thesis Student</p>
+      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
+    </div>
+
+    <div class="rec-item">
+      <div class="rec-avatar">SK<img src="{{ '/assets/img/recommendations/somayeh-khajehasani.jpg' | relative_url }}" alt="Somayeh Khajehasani" onerror="this.remove()"></div>
+      <p class="rec-name">Somayeh Khajehasani</p>
+      <p class="rec-role">Lecturer at Sirjan University of Technology</p>
+      <p class="rec-as">Supervised me as: Teaching Assistant &amp; Student</p>
+      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
+    </div>
+
+    <div class="rec-item">
+      <div class="rec-avatar">HS<img src="{{ '/assets/img/recommendations/hossein-sameti.jpg' | relative_url }}" alt="Dr. Hossein Sameti" onerror="this.remove()"></div>
+      <p class="rec-name">Dr. Hossein Sameti</p>
+      <p class="rec-role">Associate Professor at Sharif University of Technology</p>
+      <p class="rec-as">Supervised me as: Colleague &amp; AI Instructor</p>
+      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
+    </div>
+
+    <div class="rec-item">
+      <div class="rec-avatar">MA<img src="{{ '/assets/img/recommendations/mahmoud-alipour.jpg' | relative_url }}" alt="Mahmoud Alipour" onerror="this.remove()"></div>
+      <p class="rec-name">Mahmoud Alipour</p>
+      <p class="rec-role">Head of ADAS Group at JETCO</p>
+      <p class="rec-as">Supervised me as: Teaching Assistant</p>
+      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Recommendation letter</a>
+    </div>
+
+    <div class="rec-item">
+      <div class="rec-avatar">PH<img src="{{ '/assets/img/recommendations/pooria-haddad.jpg' | relative_url }}" alt="Pooria Haddad" onerror="this.remove()"></div>
+      <p class="rec-name">Pooria Haddad</p>
+      <p class="rec-role">Head of Filoger Artificial Intelligence Company</p>
+      <p class="rec-as">Supervised me as: Lecturer &amp; AI Mentor</p>
+      <a class="rec-link" href="{{ '/recommendations/' | relative_url }}">Work experience certificate</a>
+    </div>
+
+  </div>
 </section>
+
+<script>
+  (function () {
+    var track = document.getElementById('rec-track');
+    var prev = document.getElementById('rec-prev');
+    var next = document.getElementById('rec-next');
+    if (!track || !prev || !next) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function step(dir) {
+      var item = track.querySelector('.rec-item');
+      var w = item ? item.getBoundingClientRect().width + 16 : 300;
+      track.scrollBy({ left: dir * w, behavior: reduce ? 'auto' : 'smooth' });
+    }
+    function update() {
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    }
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
 
 <!-- ============ 9. CONTACT ============ -->
 <section class="za-section" id="contact">
