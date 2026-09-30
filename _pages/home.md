@@ -55,11 +55,10 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
   <div class="za-hero-text">
     <h1>Zahra Amini</h1>
     <p class="za-role">Machine learning researcher in healthcare AI</p>
-    <span class="za-status">Seeking a fully funded PhD position in the UK, starting 2027</span>
+    <span class="za-status">Applying for PhD and research-oriented MSc programmes in healthcare AI, Europe, 2027 intake</span>
     <p>
       I develop explainable, well-calibrated machine learning models for biomedical data:
       clinical tabular records, medical images and physiological signals.
-      I currently work as a Research Assistant at the University of Staffordshire.
     </p>
     <div class="za-actions">
       <a class="za-btn primary" href="{{ 'assets/pdf/CV-ZahraAmini.pdf' | relative_url }}">Download CV</a>
@@ -215,8 +214,8 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
 <!-- ============ 9. CONTACT ============ -->
 <section class="za-section" id="contact">
   <div class="za-contact">
-    <h2 style="border:0;margin-bottom:.6rem">Open to PhD opportunities in healthcare AI</h2>
-    <p>If our research interests align, I would be glad to hear from you.</p>
+    <h2 style="border:0;margin-bottom:.6rem">Open to PhD and MSc opportunities in healthcare AI</h2>
+    <p>I am applying to programmes across Europe. If our research interests align, I would be glad to hear from you.</p>
     <div class="za-actions" style="justify-content:center">
       <a class="za-btn primary" href="mailto:amini75zahra@gmail.com">Email me</a>
       <a class="za-btn" href="{{ '/assets/pdf/CV-Zahra-Amini.pdf' | relative_url }}">Download CV</a>
