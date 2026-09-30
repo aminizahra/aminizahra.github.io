@@ -62,8 +62,8 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
       I currently work as a Research Assistant at the University of Staffordshire.
     </p>
     <div class="za-actions">
-      <a class="za-btn primary" href="{{ '/assets/pdf/CV-Zahra-Amini.pdf' | relative_url }}">Download CV</a>
-      <a class="za-btn" href="#publications">Publications</a>
+      <a class="za-btn primary" href="{{ 'assets/pdf/CV-ZahraAmini.pdf' | relative_url }}">Download CV</a>
+      <!-- <a class="za-btn" href="#publications">Publications</a> -->
       <a class="za-btn" href="mailto:amini75zahra@gmail.com">Contact</a>
     </div>
     <div class="za-links">
