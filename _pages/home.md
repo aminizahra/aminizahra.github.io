@@ -281,8 +281,11 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function step(dir) {
       var slide = track.querySelector('.rs-slide');
-      var w = slide ? slide.getBoundingClientRect().width + 20 : 300;
-      track.scrollBy({ left: dir * w, behavior: reduce ? 'auto' : 'smooth' });
+      if (!slide) return;
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+      var unit = slide.getBoundingClientRect().width + gap;
+      var perPage = Math.max(1, Math.round(track.clientWidth / unit));
+      track.scrollBy({ left: dir * perPage * unit, behavior: reduce ? 'auto' : 'smooth' });
     }
     function update() {
       prev.disabled = track.scrollLeft <= 2;
