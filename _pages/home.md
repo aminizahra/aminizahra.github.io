@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /
 title: Home
+permalink: /
 nav: true
 nav_order: 1
 description: Zahra Amini - Machine learning researcher in healthcare AI
@@ -63,7 +63,7 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
     </p>
     <div class="za-actions">
       <a class="za-btn primary" href="{{ 'assets/pdf/CV-ZahraAmini.pdf' | relative_url }}">Download CV</a>
-      <a class="za-btn" href="#publications">Publications</a>
+      <a class="za-btn" href="#research-outputs">Research outputs</a>
       <a class="za-btn" href="mailto:amini75zahra@gmail.com">Contact</a>
     </div>
     <div class="za-links">
@@ -100,30 +100,31 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
   </div>
 </section>
 
-<!-- ============ 3. PUBLICATIONS ============ -->
-<section class="za-section" id="publications">
-  <h2>Selected publications</h2>
+<!-- ============ 3. RESEARCH OUTPUTS ============ -->
+<section class="za-section" id="research-outputs">
+  <h2>Research outputs</h2>
   <div class="za-grid">
     <div class="za-card">
-      <span class="za-tag pending">Under review</span>
-      <h3>A calibrated prediction model for general anaesthesia triage in paediatric dentistry</h3>
-      <p>Sadegh-Zadeh S.-A., Bagheri M., <b>Amini Z.</b>, Saadat S., Barati M. A., Jarchi D.</p>
-      <p class="za-more">Development, explainability and preliminary external evaluation.</p>
-      <!-- TODO: link the preprint here when available -->
+      <span class="za-tag pending">Manuscript under review</span>
+      <h3>A calibrated prediction model for general anaesthesia triage in paediatric dentistry: development, explainability, and preliminary external evaluation</h3>
+      <p>Seyed-Ali Sadegh-Zadeh, Mahshid Bagheri, <b>Zahra Amini</b>, Shayan Saadat, Mohammad Amin Barati, Delaram Jarchi</p>
+      <p class="za-more">A calibrated ML prediction model on clinical tabular data for general anaesthesia triage, with explainable AI (XAI) techniques to ensure clinical transparency.</p>
+      <!-- TODO: add links to the preprint and code when available -->
     </div>
     <div class="za-card">
-      <span class="za-tag pending">In press</span>
+      <span class="za-tag pending">Book, in press</span>
       <h3>Introduction to Artificial Intelligence in Healthcare</h3>
-      <p><b>Amini Z.</b> (lead author) et al. Shahid Beheshti University of Medical Sciences Press.</p>
-      <p class="za-more">Textbook for medical students and professionals.</p>
+      <p><b>Zahra Amini</b> (lead author), et al. Shahid Beheshti University of Medical Sciences Press.</p>
+      <p class="za-more">An interdisciplinary textbook bridging machine learning, data analytics and healthcare, for medical students and professionals.</p>
     </div>
     <div class="za-card">
-      <span class="za-tag">B.Sc. thesis, 20/20</span>
+      <span class="za-tag">B.Sc. thesis, Spring 2020</span>
       <h3>Large-scale semantic point cloud segmentation with superpoint graphs</h3>
-      <p><b>Amini Z.</b> Supervised by Dr. Amir Salarpour, Sirjan University of Technology, 2020.</p>
+      <p><b>Zahra Amini</b>. Department of Software Engineering, Sirjan University of Technology. Supervisor: Dr. Amir Salarpour. Grade: 20/20.</p>
+      <p class="za-more">A 3D point cloud processing framework for semantic segmentation.</p>
     </div>
   </div>
-  <p style="margin-top:1rem"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+  <p style="margin-top:1rem"><a href="{{ '/publications/' | relative_url }}">Details and full list</a></p>
 </section>
 
 <!-- ============ 4. PROJECTS ============ -->
@@ -193,8 +194,9 @@ description: Zahra Amini - Machine learning researcher in healthcare AI
 <section class="za-section" id="news">
   <h2>News</h2>
   <ul class="za-timeline">
-    <li><span class="za-date">2026</span><div>Paediatric dentistry triage manuscript submitted for review.</div></li>
-    <li><span class="za-date">2026</span><div>Textbook <i>Introduction to Artificial Intelligence in Healthcare</i> accepted by SBMU Press.</div></li>
+    <!-- TODO: replace MONTH YEAR with the real dates -->
+    <li><span class="za-date">MONTH YEAR</span><div>Paediatric dentistry triage manuscript submitted for review.</div></li>
+    <li><span class="za-date">MONTH YEAR</span><div>Textbook <i>Introduction to Artificial Intelligence in Healthcare</i> in press with Shahid Beheshti University of Medical Sciences Press.</div></li>
     <li><span class="za-date">2025</span><div>Named "The AI Luminary" and ranked #3 in Data Science (Iran) by Favikon.</div></li>
   </ul>
 </section>
