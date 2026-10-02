@@ -147,5 +147,5 @@ Mastering these basic assignments and rules is your first major step toward writ
 ## Notebook
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb)
 
-[📄 Download the Python Code/Notebook](https://raw.githubusercontent.com/hobotacademy/Python-for-AI/main/01_Py_Basics/01_Py_Basics-ASH.ipynb)
+[📄 View or Download the Python Notebook](https://github.com/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb)
 
