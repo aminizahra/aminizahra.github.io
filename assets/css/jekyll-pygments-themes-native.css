@@ -39,7 +39,11 @@
 .highlight .cp {
   color: #cd2828;
   font-weight: bold;
-} /* Comment.Preproc */ /* Comment.Single */ /* Comment.Special */ /* Generic.Deleted */
+} /* Comment.Preproc */
+.highlight .c1 {
+  color: #999999;
+  font-style: italic;
+} /* Comment.Single */ /* Comment.Special */ /* Generic.Deleted */
 .highlight .ge {
   color: #d0d0d0;
   font-style: italic;
@@ -103,7 +107,10 @@
 } /* Name.Variable */ /* Operator.Word */
 .highlight .w {
   color: #666666;
-} /* Text.Whitespace */ /* Literal.Number.Float */ /* Literal.Number.Hex */
+} /* Text.Whitespace */
+.highlight .mf {
+  color: #3677a9;
+} /* Literal.Number.Float */ /* Literal.Number.Hex */
 .highlight .mi {
   color: #3677a9;
 } /* Literal.Number.Integer */
