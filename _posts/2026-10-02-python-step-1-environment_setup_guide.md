@@ -6,9 +6,6 @@ description: Store values, understand the basic data types, and run your first P
 tags: [python]
 step: 1
 ---
-
-# Setting Up Your AI and Machine Learning Environment: Python, Conda/venv, VS Code, Jupyter, and Git
-
 Welcome to the first official post on this blog! If you are stepping into the fascinating world of Artificial Intelligence (AI) and Machine Learning (ML), you are embarking on an incredible journey. However, before we can train deep neural networks or deploy predictive models, we must lay a rock-solid foundation. 
 
 In the realm of software engineering and academic research, reproducibility is paramount. The "it works on my machine" phenomenon is a common pitfall. To avoid this, we need a standardized, isolated, and highly functional development environment. 
