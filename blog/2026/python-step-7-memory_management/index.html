@@ -1,0 +1,381 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Python Basics: Postscript – Python Memory Management and Immutability | Zahra Amini </title> <meta name="author" content="Zahra Amini"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%A0&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://aminizahra.github.io/blog/2026/python-step-7-memory_management/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zahra</span> Amini </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item "> <a class="nav-link" href="/about/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/recommendations/">Recommendations </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">More </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/books/">Bookshelf</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Python Basics: Postscript – Python Memory Management and Immutability</h1> <p class="post-meta"> Created on October 02, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>   ·   <a href="/blog/tag/python"> <i class="fa-solid fa-hashtag fa-sm"></i> Python</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p>Welcome back! In our previous sessions, we successfully learned how to define variables, assign different data types, and explicitly cast them. We treated variables like simple “boxes” holding our data.</p> <p>However, to write highly optimized code for Artificial Intelligence and Machine Learning—where you will process millions of data points—you must understand what is actually happening under the hood. How does Python store this data? What happens to data we no longer need?</p> <p>In this special postscript session, we will dive into <strong>Python Memory Management</strong>, the <code class="language-plaintext highlighter-rouge">id()</code> function, Immutability, and Garbage Collection.</p> <hr> <h2 id="the-reality-of-variables-in-python">The Reality of Variables in Python</h2> <p>In many older programming languages (like C), a variable is a specific designated space in memory. In Python, <strong>variables are just name tags (references)</strong> pointing to objects in the computer’s memory. The data itself is the object.</p> <p>Let’s explore this step-by-step using Python’s built-in <code class="language-plaintext highlighter-rouge">id()</code> function, which returns the exact memory address of an object.</p> <h3 id="1-object-creation-and-variable-referencing">1. Object Creation and Variable Referencing</h3> <p>When you assign a value to a variable, Python first creates the object in memory and then attaches the variable name to it as a reference.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 1. Object Creation and Value Assignment
+# The value 10 is created as an integer object in memory. 
+# The variable 'x' is created and points to that object's memory address.
+</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  
+
+<span class="c1"># 2. Variable Referencing
+# Here, 'y' does NOT create a new object. It simply points to the 
+# exact same object (10) that 'x' is pointing to.
+</span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span>  
+
+<span class="c1"># Checking the memory address of the object using the id() function
+</span><span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Address of x: </span><span class="si">{</span><span class="nf">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># e.g., Output: 140717769671752
+</span><span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Address of y: </span><span class="si">{</span><span class="nf">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># e.g., Output: 140717769671752
+</span></code></pre></div></div> <p><em>Notice that both <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> output the exact same memory address. They are two different name tags attached to the same piece of data.</em></p> <hr> <h3 id="2-reassignment-and-garbage-collection">2. Reassignment and Garbage Collection</h3> <p>What happens if we change the value of <code class="language-plaintext highlighter-rouge">x</code>? Because <code class="language-plaintext highlighter-rouge">x</code> is just a reference, it simply stops pointing to <code class="language-plaintext highlighter-rouge">10</code> and starts pointing to a newly created object.</p> <p>When an object in memory has zero variables pointing to it, Python’s automated <strong>Garbage Collector (GC)</strong> steps in and deletes the object to free up your computer’s RAM.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 3. Reassignment and Garbage Collection
+</span><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>  
+<span class="c1"># Now, 'x' points to a newly created object with the value 20.
+# If 'y' was not still pointing to 10, the object '10' would be 
+# cleared from memory by the Garbage Collector.
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">New address of x: </span><span class="si">{</span><span class="nf">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># e.g., Output: 140717769672072
+</span></code></pre></div></div> <hr> <h3 id="3-understanding-immutability">3. Understanding Immutability</h3> <p>In Python, primitive data types like <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">str</code>, and <code class="language-plaintext highlighter-rouge">bool</code> are <strong>Immutable</strong> (unchangeable).</p> <p>This is a critical concept: <em>You cannot alter the actual object in memory once it is created.</em> When you try to modify a number or a string, Python actually creates a brand-new object in memory and points the variable to the new one.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 4. Immutable Data Types in Action
+</span>
+<span class="c1"># Integer Example
+</span><span class="n">num</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Address of num: </span><span class="si">{</span><span class="nf">id</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># Output: 140717769672776
+</span>
+<span class="c1"># We mathematically add 1 to num. 
+# Because integers are immutable, Python creates a new object (43).
+</span><span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>  
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">New address of num after change: </span><span class="si">{</span><span class="nf">id</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># Output: 140717769672808
+# The address has changed!
+</span>
+<span class="c1"># String Example
+</span><span class="n">text</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Hello</span><span class="sh">"</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Address of text: </span><span class="si">{</span><span class="nf">id</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># Initial address of the string
+</span>
+<span class="c1"># Appending text creates a new string object in memory
+</span><span class="n">text</span> <span class="o">+=</span> <span class="sh">"</span><span class="s"> World</span><span class="sh">"</span>  
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">New address of text after change: </span><span class="si">{</span><span class="nf">id</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># New address generated
+</span></code></pre></div></div> <hr> <h3 id="4-memory-optimization-integer-caching">4. Memory Optimization (Integer Caching)</h3> <p>Python is highly optimized for performance. To save memory and execution time, the CPython implementation pre-loads and caches small, frequently used integers (specifically from <code class="language-plaintext highlighter-rouge">-5</code> to <code class="language-plaintext highlighter-rouge">256</code>).</p> <p>If you assign two different variables to the same small integer within this range, Python will not create two separate objects. It will point both variables to the cached object.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 5. Memory Optimization for Small Integers (Interning)
+</span><span class="n">a</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">256</span>
+
+<span class="c1"># Because 256 falls within the optimized range (-5 to 256), 
+# both 'a' and 'b' point to the exact same pre-existing object in memory.
+</span><span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Do a and b point to the same memory address? </span><span class="si">{</span><span class="nf">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nf">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>  
+<span class="c1"># Output: True
+</span></code></pre></div></div> <p><em>(Note: If you were to do this with large numbers, like <code class="language-plaintext highlighter-rouge">a = 1000</code> and <code class="language-plaintext highlighter-rouge">b = 1000</code> in standard execution environments, they would generate different memory addresses because they fall outside the cached range!)</em></p> <hr> <h2 id="conclusion">Conclusion</h2> <p>Understanding memory references, immutability, and garbage collection separates average programmers from excellent software engineers. When you begin passing enormous datasets into machine learning algorithms, knowing how to manage variable references prevents memory leaks and fatal system crashes.</p> <p>Now that we understand how data lives in our computer’s memory, we are ready to manipulate it. In our next official session, we will explore <strong>Python Operators</strong> (Arithmetic, Logical, and Comparison). Stay tuned!</p> <hr> <h2 id="notebook">Notebook</h2> <p><a href="https://colab.research.google.com/github/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb" rel="external nofollow noopener" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p> <p><a href="https://github.com/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb" rel="external nofollow noopener" target="_blank">📄 View or Download the Python Notebook</a></p> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/python-step-6-basics_casting/">Python Basics: Advanced Assignment and Type Casting</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/python-step-5-basics_print_function/">Python Basics: The print() Function and String Formatting</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/python-step-4-basics_variables/">Python Basics: Variables and Data Types</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/python-step-3-python_roadmap/">Python Roadmap: What to Learn, In What Order, and Which Tools to Use</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/python-step-2-cloud_notebooks_guide/">Introduction to Google Colab and Kaggle Notebooks: Cloud-Based Machine Learning</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/python-step-1-environment_setup_guide/">Setting Up Your AI and Machine Learning Environment: Python, Conda/venv, VS Code, Jupyter, and Git</a> </li> </ul> </div> </div> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "Home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-about",
+          title: "about",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/about/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "A growing collection of your cool projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-blog",
+          title: "Blog",
+          description: "Step-by-step tutorials on Python, machine learning and more.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum vitae of Zahra Amini",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-recommendations",
+          title: "Recommendations",
+          description: "Professors, managers, and colleagues who have guided my academic and professional journey.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/recommendations/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Course materials, schedules, and resources for classes taught.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "dropdown-bookshelf",
+              title: "Bookshelf",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/books/";
+              },
+            },{id: "post-python-basics-postscript-python-memory-management-and-immutability",
+        
+          title: "Python Basics: Postscript – Python Memory Management and Immutability",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/python-step-7-memory_management/";
+          
+        },
+      },{id: "post-python-basics-advanced-assignment-and-type-casting",
+        
+          title: "Python Basics: Advanced Assignment and Type Casting",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/python-step-6-basics_casting/";
+          
+        },
+      },{id: "post-python-basics-the-print-function-and-string-formatting",
+        
+          title: "Python Basics: The print() Function and String Formatting",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/python-step-5-basics_print_function/";
+          
+        },
+      },{id: "post-python-basics-variables-and-data-types",
+        
+          title: "Python Basics: Variables and Data Types",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/python-step-4-basics_variables/";
+          
+        },
+      },{id: "post-python-roadmap-what-to-learn-in-what-order-and-which-tools-to-use",
+        
+          title: "Python Roadmap: What to Learn, In What Order, and Which Tools to Use...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/python-step-3-python_roadmap/";
+          
+        },
+      },{id: "post-introduction-to-google-colab-and-kaggle-notebooks-cloud-based-machine-learning",
+        
+          title: "Introduction to Google Colab and Kaggle Notebooks: Cloud-Based Machine Learning",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/python-step-2-cloud_notebooks_guide/";
+          
+        },
+      },{id: "post-setting-up-your-ai-and-machine-learning-environment-python-conda-venv-vs-code-jupyter-and-git",
+        
+          title: "Setting Up Your AI and Machine Learning Environment: Python, Conda/venv, VS Code, Jupyter,...",
+        
+        description: "Store values, understand the basic data types, and run your first Python code.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/python-step-1-environment_setup_guide/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "people-dr-ahmad-pouramini",
+          title: 'Dr. Ahmad Pouramini',
+          description: "Assistant Professor at Sirjan University of Technology | Ph.D. in AI from Tehran University | Focus: Artificial Intelligence, Machine Learning & NLP",
+          section: "People",handler: () => {
+              window.location.href = "/people/ahmad-pouramini/";
+            },},{id: "people-dr-amir-salarpour",
+          title: 'Dr. Amir Salarpour',
+          description: "PostDoctoral Researcher at Clemson University | Assistant Professor & Thesis Supervisor | Focus: Computer Vision & Deep Learning",
+          section: "People",handler: () => {
+              window.location.href = "/people/amir-salarpour/";
+            },},{id: "people-dr-hossein-sameti",
+          title: 'Dr. Hossein Sameti',
+          description: "Associate Professor at Sharif University of Technology | Focus: Machine Learning & Speech Processing",
+          section: "People",handler: () => {
+              window.location.href = "/people/hossein-sameti/";
+            },},{id: "people-mahmoud-alipour",
+          title: 'Mahmoud Alipour',
+          description: "Head of ADAS Group at JETCO | AI Faculty Member at Filoger",
+          section: "People",handler: () => {
+              window.location.href = "/people/mahmoud-alipour/";
+            },},{id: "people-pooria-haddad",
+          title: 'Pooria Haddad',
+          description: "Head of Filoger Artificial Intelligence Company | Focus: AI & Data Science Education",
+          section: "People",handler: () => {
+              window.location.href = "/people/pooria-haddad-filoger/";
+            },},{id: "people-somayeh-khajehasani",
+          title: 'Somayeh Khajehasani',
+          description: "Lecturer at Sirjan University of Technology | Focus: Artificial Intelligence & Data Structures",
+          section: "People",handler: () => {
+              window.location.href = "/people/somayeh-khajehasani/";
+            },},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-project-2",
+          title: 'project 2',
+          description: "a project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-project-3-with-very-long-name",
+          title: 'project 3 with very long name',
+          description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "projects-project-5",
+          title: 'project 5',
+          description: "a project with a background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
+            },},{id: "projects-project-6",
+          title: 'project 6',
+          description: "a project with no image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_project/";
+            },},{id: "projects-project-7",
+          title: 'project 7',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
+            },},{id: "projects-project-8",
+          title: 'project 8',
+          description: "an other project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_project/";
+            },},{id: "projects-project-9",
+          title: 'project 9',
+          description: "another project with an image 🎉",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{id: "teachings-python-for-ai",
+          title: 'Python for AI',
+          description: "A hands-on Python course built for artificial intelligence, machine learning and data science. It goes from Python basics to NumPy, Pandas, Matplotlib and regular expressions, and ends with a final project.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/python-for-ai/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-inspire',
+        title: 'Inspire HEP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://inspirehep.net/authors/1010907", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.alberteinstein.com/", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
