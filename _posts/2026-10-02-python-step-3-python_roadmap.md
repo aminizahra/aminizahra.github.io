@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python Roadmap: What to Learn, In What Order, and Which Tools to Use"
-date: 2026-10-05
+date: 2026-10-02
 tags: [Python]
 step: 3
 ---
