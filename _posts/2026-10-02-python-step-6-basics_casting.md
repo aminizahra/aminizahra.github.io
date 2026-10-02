@@ -138,3 +138,10 @@ print(w)  # Output: False
 Understanding how to manipulate variables and explicitly cast data types is a fundamental skill in data engineering. By mastering `int()`, `float()`, `str()`, and `bool()`, you now have the tools to sanitize and format raw data into structured inputs suitable for computation.
 
 In our next session, we will take these variables and start performing mathematical and logical computations using **Python Operators**. Keep practicing, and happy coding!
+
+---
+
+## Notebook
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb)
+
+[📄 View or Download the Python Notebook](https://github.com/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb)
