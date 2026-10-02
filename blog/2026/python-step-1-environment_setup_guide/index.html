@@ -1,0 +1,276 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Setting Up Your AI and Machine Learning Environment: Python, Conda/venv, VS Code, Jupyter, and Git | Zahra Amini </title> <meta name="author" content="Zahra Amini"> <meta name="description" content="Store values, understand the basic data types, and run your first Python code."> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%A0&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://aminizahra.github.io/blog/2026/python-step-1-environment_setup_guide/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Zahra</span> Amini </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item "> <a class="nav-link" href="/about/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/recommendations/">Recommendations </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">More </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/books/">Bookshelf</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Setting Up Your AI and Machine Learning Environment: Python, Conda/venv, VS Code, Jupyter, and Git</h1> <p class="post-meta"> Created on October 02, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>   ·   <a href="/blog/tag/python"> <i class="fa-solid fa-hashtag fa-sm"></i> python</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <h1 id="setting-up-your-ai-and-machine-learning-environment-python-condavenv-vs-code-jupyter-and-git">Setting Up Your AI and Machine Learning Environment: Python, Conda/venv, VS Code, Jupyter, and Git</h1> <p>Welcome to the first official post on this blog! If you are stepping into the fascinating world of Artificial Intelligence (AI) and Machine Learning (ML), you are embarking on an incredible journey. However, before we can train deep neural networks or deploy predictive models, we must lay a rock-solid foundation.</p> <p>In the realm of software engineering and academic research, reproducibility is paramount. The “it works on my machine” phenomenon is a common pitfall. To avoid this, we need a standardized, isolated, and highly functional development environment.</p> <p>In this comprehensive guide, we will walk step-by-step through setting up a professional-grade ML environment using Python, Conda (or venv), Visual Studio Code (VS Code), Jupyter Notebooks, and Git.</p> <hr> <h2 id="step-1-the-foundation--python-and-virtual-environments">Step 1: The Foundation – Python and Virtual Environments</h2> <p>Python is the undisputed lingua franca of AI and Machine Learning. However, simply installing Python globally on your operating system is considered bad practice. As you work on different projects, you will inevitably require different versions of libraries (e.g., Project A needs TensorFlow 2.10, while Project B requires PyTorch 2.0).</p> <p>To solve this dependency hell, we use <strong>Virtual Environments</strong>. There are two main contenders in the Python ecosystem:</p> <ol> <li> <strong><code class="language-plaintext highlighter-rouge">venv</code> (with <code class="language-plaintext highlighter-rouge">pip</code>):</strong> The built-in Python module. It is lightweight and excellent for standard web development or scripting.</li> <li> <strong>Conda:</strong> A cross-platform package and environment manager. <strong>For Data Science and ML, Conda is highly recommended.</strong> It handles complex, non-Python dependencies (like C++ binaries for NumPy, or CUDA toolkits for GPU acceleration) far more gracefully than <code class="language-plaintext highlighter-rouge">pip</code>.</li> </ol> <h3 id="installing-miniconda-recommended">Installing Miniconda (Recommended)</h3> <p>Anaconda is a popular distribution, but it is bloated with hundreds of pre-installed packages you may never use. Instead, we will install <strong>Miniconda</strong>—a minimal, lightweight version.</p> <ol> <li>Navigate to the <a href="https://docs.conda.io/en/latest/miniconda.html" rel="external nofollow noopener" target="_blank">official Miniconda download page</a>.</li> <li>Download the installer specific to your operating system (Windows, macOS, or Linux).</li> <li>Run the installer. (For Windows users, it is highly recommended to check the box that says “Add Miniconda3 to my PATH environment variable” or use the Anaconda Prompt provided).</li> <li>Verify the installation by opening your terminal or command prompt and running: <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>conda <span class="nt">--version</span>
+</code></pre></div> </div> </li> </ol> <hr> <h2 id="step-2-creating-your-first-ml-environment">Step 2: Creating Your First ML Environment</h2> <p>Now that Conda is installed, let’s create a dedicated, isolated environment for your machine learning projects.</p> <ol> <li> <strong>Create the environment:</strong> In your terminal, run the following command. We will name our environment <code class="language-plaintext highlighter-rouge">ml-env</code> and specify Python 3.10 (a highly stable version for most current ML frameworks). <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>conda create <span class="nt">--name</span> ml-env <span class="nv">python</span><span class="o">=</span>3.10 <span class="nt">-y</span>
+</code></pre></div> </div> <p><em>(The <code class="language-plaintext highlighter-rouge">-y</code> flag automatically says “yes” to installing base dependencies).</em></p> </li> <li> <strong>Activate the environment:</strong> <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>conda activate ml-env
+</code></pre></div> </div> <p>You should now see <code class="language-plaintext highlighter-rouge">(ml-env)</code> prepended to your terminal prompt.</p> </li> <li> <strong>Install essential ML libraries:</strong> Now, let’s populate our environment with the fundamental tools of data science: <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>conda <span class="nb">install </span>numpy pandas matplotlib scikit-learn <span class="nt">-y</span>
+</code></pre></div> </div> </li> </ol> <p><em>(Note: If you strongly prefer <code class="language-plaintext highlighter-rouge">venv</code>, you can achieve a similar setup by running <code class="language-plaintext highlighter-rouge">python -m venv ml-env</code> followed by <code class="language-plaintext highlighter-rouge">source ml-env/bin/activate</code> on Mac/Linux or <code class="language-plaintext highlighter-rouge">ml-env\Scripts\activate</code> on Windows, and then using <code class="language-plaintext highlighter-rouge">pip install</code>)</em>.</p> <hr> <h2 id="step-3-setting-up-the-ultimate-editor--vs-code">Step 3: Setting Up the Ultimate Editor – VS Code</h2> <p>While you can write Python in a simple text editor, an Integrated Development Environment (IDE) boosts productivity exponentially. <strong>Visual Studio Code (VS Code)</strong> is currently the most popular, extensible, and lightweight IDE for Python developers.</p> <ol> <li> <strong>Download and Install:</strong> Visit the <a href="https://code.visualstudio.com/" rel="external nofollow noopener" target="_blank">VS Code website</a> and download the appropriate version for your OS.</li> <li> <strong>Install Essential Extensions:</strong> Open VS Code. On the left-hand sidebar, click the “Extensions” icon (four squares). Search for and install the following: <ul> <li> <strong>Python (by Microsoft):</strong> Provides syntax highlighting, IntelliSense (code completion), and debugging.</li> <li> <strong>Jupyter (by Microsoft):</strong> Allows you to run and edit Jupyter Notebooks directly inside VS Code.</li> <li> <strong>Pylance:</strong> Provides highly performant, type-rich language support.</li> </ul> </li> <li> <strong>Link VS Code to your Conda Environment:</strong> <ul> <li>Open the Command Palette in VS Code (<code class="language-plaintext highlighter-rouge">Ctrl+Shift+P</code> on Windows/Linux, <code class="language-plaintext highlighter-rouge">Cmd+Shift+P</code> on macOS).</li> <li>Type <code class="language-plaintext highlighter-rouge">Python: Select Interpreter</code> and hit Enter.</li> <li>Select the interpreter that corresponds to your Conda environment (it should look something like <code class="language-plaintext highlighter-rouge">Python 3.10.x ('ml-env': conda)</code>).</li> </ul> </li> </ol> <hr> <h2 id="step-4-jupyter-notebooks--the-researchers-canvas">Step 4: Jupyter Notebooks – The Researcher’s Canvas</h2> <p>Machine Learning is an iterative, experimental process. You need to visualize data, run small blocks of code, and inspect outputs dynamically. Jupyter Notebooks (<code class="language-plaintext highlighter-rouge">.ipynb</code> files) are the industry standard for this workflow.</p> <p>Since you installed the Jupyter extension in VS Code, setting it up is incredibly seamless.</p> <ol> <li>First, ensure the Jupyter kernel is installed in your Conda environment. (Keep your terminal open with <code class="language-plaintext highlighter-rouge">(ml-env)</code> activated): <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>conda <span class="nb">install </span>ipykernel <span class="nt">-y</span>
+</code></pre></div> </div> </li> <li>In VS Code, create a new file and name it <code class="language-plaintext highlighter-rouge">test.ipynb</code>.</li> <li>Open the file. In the top right corner of the VS Code interface, click on <strong>“Select Kernel”</strong> (or it might display the current Python version).</li> <li>Choose <strong>Jupyter Kernel</strong> -&gt; <strong>Python Environments</strong>, and select your <code class="language-plaintext highlighter-rouge">ml-env</code> Conda environment.</li> <li>Type <code class="language-plaintext highlighter-rouge">print("Hello, Machine Learning!")</code> in the first cell and press <code class="language-plaintext highlighter-rouge">Shift + Enter</code> to run it. If it prints successfully, your Jupyter setup is complete!</li> </ol> <hr> <h2 id="step-5-version-control-with-git">Step 5: Version Control with Git</h2> <p>As you build models, you will write hundreds of scripts, tweak hyperparameters, and refactor code. How do you keep track of all these changes without naming your files <code class="language-plaintext highlighter-rouge">model_final_v2_really_final.py</code>? The answer is <strong>Git</strong>.</p> <p>Git is a version control system that tracks changes to your files over time, allowing you to revert back to previous states and collaborate with others seamlessly (usually via platforms like GitHub).</p> <ol> <li> <strong>Install Git:</strong> <ul> <li> <strong>Windows:</strong> Download from <a href="https://git-scm.com/" rel="external nofollow noopener" target="_blank">git-scm.com</a>.</li> <li> <strong>macOS:</strong> Open terminal and run <code class="language-plaintext highlighter-rouge">git --version</code> (this will prompt an installation if you don’t have it).</li> <li> <strong>Linux:</strong> Run <code class="language-plaintext highlighter-rouge">sudo apt-get install git</code>.</li> </ul> </li> <li> <strong>Configure Git:</strong> Open your terminal and set your global identity. This information will be attached to every “commit” (save point) you make. <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Your Name"</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"your.email@example.com"</span>
+</code></pre></div> </div> </li> <li> <strong>Initialize a Repository:</strong> Navigate to your project folder in the terminal and run: <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div> </div> <p><em>(Pro Tip: Always create a <code class="language-plaintext highlighter-rouge">.gitignore</code> file in your project directory to prevent uploading unnecessary files—like virtual environments, <code class="language-plaintext highlighter-rouge">.DS_Store</code> on Macs, or large datasets—to your GitHub repository. You can generate one automatically using sites like <a href="https://www.toptal.com/developers/gitignore" rel="external nofollow noopener" target="_blank">gitignore.io</a>.)</em></p> </li> </ol> <hr> <h2 id="conclusion">Conclusion</h2> <p>Congratulations! You have successfully configured a professional, robust, and reproducible development environment. You now have the power of isolated Python environments via Conda, the sleek editing capabilities of VS Code, the interactive experimentation of Jupyter, and the historical tracking of Git.</p> <p>With this infrastructure in place, you are perfectly positioned to dive deep into the algorithms and mathematics of Artificial Intelligence. In our next post, we will start getting our hands dirty with data manipulation using NumPy and Pandas.</p> <p>Stay tuned, and happy coding!</p> </div> </article> </div> </div> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "Home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-about",
+          title: "about",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/about/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "A growing collection of your cool projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-blog",
+          title: "Blog",
+          description: "Step-by-step tutorials on Python, machine learning and more.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum vitae of Zahra Amini",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-recommendations",
+          title: "Recommendations",
+          description: "Professors, managers, and colleagues who have guided my academic and professional journey.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/recommendations/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Course materials, schedules, and resources for classes taught.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "dropdown-bookshelf",
+              title: "Bookshelf",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/books/";
+              },
+            },{id: "post-setting-up-your-ai-and-machine-learning-environment-python-conda-venv-vs-code-jupyter-and-git",
+        
+          title: "Setting Up Your AI and Machine Learning Environment: Python, Conda/venv, VS Code, Jupyter,...",
+        
+        description: "Store values, understand the basic data types, and run your first Python code.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/python-step-1-environment_setup_guide/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "people-dr-ahmad-pouramini",
+          title: 'Dr. Ahmad Pouramini',
+          description: "Assistant Professor at Sirjan University of Technology | Ph.D. in AI from Tehran University | Focus: Artificial Intelligence, Machine Learning & NLP",
+          section: "People",handler: () => {
+              window.location.href = "/people/ahmad-pouramini/";
+            },},{id: "people-dr-amir-salarpour",
+          title: 'Dr. Amir Salarpour',
+          description: "PostDoctoral Researcher at Clemson University | Assistant Professor & Thesis Supervisor | Focus: Computer Vision & Deep Learning",
+          section: "People",handler: () => {
+              window.location.href = "/people/amir-salarpour/";
+            },},{id: "people-dr-hossein-sameti",
+          title: 'Dr. Hossein Sameti',
+          description: "Associate Professor at Sharif University of Technology | Focus: Machine Learning & Speech Processing",
+          section: "People",handler: () => {
+              window.location.href = "/people/hossein-sameti/";
+            },},{id: "people-mahmoud-alipour",
+          title: 'Mahmoud Alipour',
+          description: "Head of ADAS Group at JETCO | AI Faculty Member at Filoger",
+          section: "People",handler: () => {
+              window.location.href = "/people/mahmoud-alipour/";
+            },},{id: "people-pooria-haddad",
+          title: 'Pooria Haddad',
+          description: "Head of Filoger Artificial Intelligence Company | Focus: AI & Data Science Education",
+          section: "People",handler: () => {
+              window.location.href = "/people/pooria-haddad-filoger/";
+            },},{id: "people-somayeh-khajehasani",
+          title: 'Somayeh Khajehasani',
+          description: "Lecturer at Sirjan University of Technology | Focus: Artificial Intelligence & Data Structures",
+          section: "People",handler: () => {
+              window.location.href = "/people/somayeh-khajehasani/";
+            },},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-project-2",
+          title: 'project 2',
+          description: "a project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-project-3-with-very-long-name",
+          title: 'project 3 with very long name',
+          description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "projects-project-5",
+          title: 'project 5',
+          description: "a project with a background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
+            },},{id: "projects-project-6",
+          title: 'project 6',
+          description: "a project with no image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_project/";
+            },},{id: "projects-project-7",
+          title: 'project 7',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
+            },},{id: "projects-project-8",
+          title: 'project 8',
+          description: "an other project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_project/";
+            },},{id: "projects-project-9",
+          title: 'project 9',
+          description: "another project with an image 🎉",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{id: "teachings-python-for-ai",
+          title: 'Python for AI',
+          description: "A hands-on Python course built for artificial intelligence, machine learning and data science. It goes from Python basics to NumPy, Pandas, Matplotlib and regular expressions, and ends with a final project.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/python-for-ai/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-inspire',
+        title: 'Inspire HEP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://inspirehep.net/authors/1010907", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.alberteinstein.com/", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
