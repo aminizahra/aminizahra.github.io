@@ -3,7 +3,7 @@ layout: post
 title: "Setting Up Your AI and Machine Learning Environment: Python, Conda/venv, VS Code, Jupyter, and Git"
 date: 2026-10-02
 description: Store values, understand the basic data types, and run your first Python code.
-tags: [python]
+tags: [Python]
 step: 1
 ---
 Welcome to the first official post on this blog! If you are stepping into the fascinating world of Artificial Intelligence (AI) and Machine Learning (ML), you are embarking on an incredible journey. However, before we can train deep neural networks or deploy predictive models, we must lay a rock-solid foundation. 
