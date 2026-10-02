@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /blog/
-title: blog
+title: Blog
 description: Step-by-step tutorials on Python, machine learning and more.
 nav: true
-nav_order: 1
+nav_order: 5
 ---
 
 <style>
