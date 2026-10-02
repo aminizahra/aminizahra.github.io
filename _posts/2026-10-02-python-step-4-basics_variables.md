@@ -145,6 +145,4 @@ is_student = True     # Boolean
 Mastering these basic assignments and rules is your first major step toward writing robust Python scripts. Practice defining your own variables, and in our next section, we will explore how to manipulate these values using **Operators** and **String Methods**!
 
 ## Notebook
-<iframe src="https://nbviewer.org/github/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb" width="100%" height="800px" style="border: none;">
-    <p>Your browser does not support iframes. <a href="https://nbviewer.org/github/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb">View the Jupyter Notebook directly</a>.</p>
-</iframe>
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hobotacademy/Python-for-AI/blob/main/01_Py_Basics/01_Py_Basics-ASH.ipynb)
