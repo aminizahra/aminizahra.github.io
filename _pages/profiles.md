@@ -4,7 +4,7 @@ permalink: /recommendations/
 title: Recommendations
 description: "Professors, managers, and colleagues who have guided my academic and professional journey."
 nav: true
-nav_order: 5
+nav_order: 8
 ---
 
 <style>
