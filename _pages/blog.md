@@ -4,7 +4,7 @@ permalink: /blog/
 title: Blog
 description: Step-by-step tutorials on Python, machine learning and more.
 nav: true
-nav_order: 5
+nav_order: 8
 ---
 
 <style>
