@@ -1,0 +1,20 @@
+# Top menu, first to last. Use each page's permalink.
+order:
+  - /
+  - /about/
+  - /cv/
+  - /proposals/
+  - /teaching/
+  - /projects/
+  - /roadmap/
+  - /recommendations/
+  - /dropdown/        # "More" appears here, last
+
+# Items inside "More", in this order.
+more:
+  - title: Blog
+    permalink: /blog/
+  - title: Repositories
+    permalink: /repositories/
+  - title: Bookshelf
+    permalink: /books/
