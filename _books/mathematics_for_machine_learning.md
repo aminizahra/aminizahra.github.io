@@ -3,8 +3,8 @@ layout: book-review
 title: Mathematics for Machine Learning
 author: Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong
 cover: assets/img/book_covers/mathematics_for_machine_learning.jpg
-categories: mathematics machine-learning computer-science data-science
-tags: math foundations
+category: Mathematics
+tags: [Math, Machine Learning, Foundations]
 status: 
 link: https://mml-book.github.io/
 ---
