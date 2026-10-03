@@ -3,7 +3,7 @@ layout: book-review
 title: Data Structures and Algorithms in Python
 author: John Canning, Alan Broder, Robert Lafore
 cover: assets/img/book_covers/data_structures_canning.jpg
-category: Data Structures
+category: Data structures and algorithms
 tags: [Python, Algorithms, Computer Science, Theory]
 status: " "
 link: https://www.informit.com/store/data-structures-and-algorithms-in-python-9780134855684
