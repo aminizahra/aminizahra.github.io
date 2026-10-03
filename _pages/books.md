@@ -27,10 +27,11 @@ nav: false
   </h3>
   
   <!-- Grid for displaying book cards -->
-  <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4 mb-5">
+  <div class="row g-4 mb-5">
     {% assign category_books = site.books | where: "category", category %}
-    {% for book in category_books %}
-      <div class="col">
+    {% for book in category_books %}      
+      <!-- Explicit column sizes to ensure books stay small (2 to 6 books per row based on screen size) -->
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
         <div class="card h-100 hoverable">
           <a href="{{ book.link | default: book.url | relative_url }}" target="_blank">
             <img src="{{ book.cover | relative_url }}" class="card-img-top" alt="{{ book.title }}" style="object-fit: cover; height: 100%;">
