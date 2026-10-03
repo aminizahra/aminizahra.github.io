@@ -3,8 +3,8 @@ layout: book-review
 title: Practical Statistics for Data Scientists
 author: Peter Bruce, Andrew Bruce, Peter Gedeck
 cover: assets/img/book_covers/practical_statistics.jpg
-categories: statistics data-science machine-learning
-tags: statistics foundations python r
+category: data-science
+tags: [statistics, foundations, python, r]
 status: Finished
 link: https://www.oreilly.com/library/view/practical-statistics-for/9781492072081/
 ---
