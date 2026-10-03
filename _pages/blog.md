@@ -3,7 +3,7 @@ layout: page
 permalink: /blog/
 title: Blog
 description: Step-by-step tutorials on Python, machine learning and more.
-nav: true
+nav: false
 nav_order: 9
 ---
 
