@@ -4,7 +4,7 @@ permalink: /proposals/
 title: Proposals
 description: Research directions for PhD applications, with a public outline of each proposal. Full proposals are shared privately on request.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 <style>
